@@ -4,28 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="First push">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Country.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/EyeColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/HairColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Status.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Check.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordinatesValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EndDateValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/NameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PassportIDValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/SalaryValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StartDateValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StatusValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/Validator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Задание.png" afterDir="false" />
+    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Add validators">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Pam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Check.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordinatesValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EndDateValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/NameValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PassportIDValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/SalaryValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StartDateValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StatusValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/Validator.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,13 +43,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2MSS4yY6NzM2cq4G5O9DnkXvJv0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -74,6 +58,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Test&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/no5_170123_600900-master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -133,7 +118,10 @@
       <workItem from="1678896192731" duration="11000" />
       <workItem from="1678896245864" duration="643000" />
       <workItem from="1678896907362" duration="7974000" />
-      <workItem from="1678908666368" duration="1047000" />
+      <workItem from="1678908666368" duration="1446000" />
+      <workItem from="1678912007741" duration="381000" />
+      <workItem from="1681200928275" duration="1245000" />
+      <workItem from="1681204464625" duration="2457000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1678043317673</created>
@@ -156,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678043808152</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add validators">
+      <created>1678910082836</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678910082836</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +161,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Create project" />
     <MESSAGE value="First push" />
-    <option name="LAST_COMMIT_MESSAGE" value="First push" />
+    <MESSAGE value="Add validators" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add validators" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
