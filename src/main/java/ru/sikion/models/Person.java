@@ -1,4 +1,8 @@
-package ru.sikion;
+package ru.sikion.models;
+
+import ru.sikion.models.Identity.Country;
+import ru.sikion.models.Identity.EyeColor;
+import ru.sikion.models.Identity.HairColor;
 
 import java.util.Objects;
 
@@ -11,10 +15,10 @@ import java.util.Objects;
  * */
 
 public class Person {
-    private String passportID; //Значение этого поля должно быть уникальным, Длина строки не должна быть больше 36, Поле не может быть null
-    private EyeColor eyeColor; //Поле может быть null
-    private HairColor hairColor; //Поле не может быть null
-    private Country nationality; //Поле может быть null
+    private String passportID;
+    private EyeColor eyeColor;
+    private HairColor hairColor;
+    private Country nationality;
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and lower than 36.

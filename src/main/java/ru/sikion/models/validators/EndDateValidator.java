@@ -1,18 +1,22 @@
 package ru.sikion.models.validators;
 
+import java.time.LocalDate;
+
 /**
  * End date validator. Checks if end date is not null.
- * @version 1.0
+ *
  * @author Sikion
+ * @version 1.0
  */
-public class EndDateValidator implements Validator{
+public class EndDateValidator implements Validator<LocalDate> {
     /**
      * Validates end date.
+     *
      * @param value end date to validate
-     * @return true if end date is not null. Otherwise, false.
+     * @return true if date is date. Otherwise, false.
      */
     @Override
-    public boolean validate(Object value) {
-        return value instanceof java.time.ZonedDateTime endDate;
+    public boolean validate(LocalDate value) {
+        return true;
     }
 }

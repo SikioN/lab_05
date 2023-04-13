@@ -1,4 +1,4 @@
-package ru.sikion;
+package ru.sikion.models.Identity;
 
 public enum Country {
     UNITED_KINGDOM,
