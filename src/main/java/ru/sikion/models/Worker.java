@@ -1,15 +1,17 @@
-package ru.sikion;
+package ru.sikion.models;
+
+import ru.sikion.models.Identity.Status;
 
 import java.util.Objects;
 
-/** Model of Worker. Main model of the program. Contains getters/setters of each class fields.
+/**
+ * Model of Worker. Main model of the program. Contains getters/setters of each class fields.
  * Some fields have restrictions. It's signed under every method of field.
  *
- * @since 1.0
  * @author Sikion
- * */
-
-public class Worker {
+ * @since 1.0
+ */
+public class Worker implements Comparable<Worker> {
     private Long id;
     private String name;
     private Coordinates coordinates;
@@ -22,6 +24,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
+     *
      * @return id of the worker
      */
     public Long getId() {
@@ -30,6 +33,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null. String must not be empty.
+     *
      * @return Name of the worker
      */
     public String getName() {
@@ -38,6 +42,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null.
+     *
      * @return Coordinates of the worker
      */
     public Coordinates getCoordinates() {
@@ -46,6 +51,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null and the value of this field should be automatically generated.
+     *
      * @return Creation date of the worker
      */
     public java.util.Date getCreationDate() {
@@ -54,6 +60,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null. Value of this field should be greater than 0.
+     *
      * @return Salary of the worker
      */
     public Double getSalary() {
@@ -62,6 +69,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null.
+     *
      * @return Start date of the worker
      */
     public java.util.Date getStartDate() {
@@ -70,6 +78,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @return End date of the worker
      */
     public java.time.ZonedDateTime getEndDate() {
@@ -78,6 +87,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @return Status of the worker
      */
     public Status getStatus() {
@@ -86,15 +96,25 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @return Person of the worker
      */
     public Person getPerson() {
         return person;
     }
 
+    /**
+     * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
+     *
+     * @param id value of field id
+     */
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     /**
      * Restrictions: Field cannot be null. String must not be empty.
+     *
      * @param name value of field name
      */
     public void setName(String name) {
@@ -103,6 +123,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null.
+     *
      * @param coordinates value of field coordinates
      */
     public void setCoordinates(Coordinates coordinates) {
@@ -111,6 +132,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null. Value of this field should be greater than 0.
+     *
      * @param salary of value field salary
      */
     public void setSalary(Double salary) {
@@ -119,6 +141,7 @@ public class Worker {
 
     /**
      * Restrictions: Field cannot be null.
+     *
      * @param startDate of value field startDate
      */
     public void setStartDate(java.util.Date startDate) {
@@ -127,6 +150,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @param endDate of value field endDate
      */
     public void setEndDate(java.time.ZonedDateTime endDate) {
@@ -135,6 +159,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @param status of value field status
      */
     public void setStatus(Status status) {
@@ -143,6 +168,7 @@ public class Worker {
 
     /**
      * Restrictions: Field can be null.
+     *
      * @param person of value field person
      */
     public void setPerson(Person person) {
@@ -176,7 +202,21 @@ public class Worker {
                 '}';
     }
 
+    @Override
+    public int compareTo(Worker o) {
+        return 0;
+    }
 
+
+//    @Override
+//    public int compareTo(Worker o) {
+//        if (o == null) return 1;
+//        if (o.id == null) return -1;
+//        if (this.distance - o.distance < 0)
+//            return -1;
+//        else if (this.distance == o.distance)
+//            return 0;
+//        else
+//            return 1;
+//    }
 }
-
-

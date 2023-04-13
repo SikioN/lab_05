@@ -1,4 +1,4 @@
-package ru.sikion;
+package ru.sikion.models.Identity;
 
 public enum EyeColor {
     BLACK("\u001B[31m"),
