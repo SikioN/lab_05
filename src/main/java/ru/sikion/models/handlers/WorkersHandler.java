@@ -15,7 +15,7 @@ import java.util.*;
  */
 public class WorkersHandler implements CollectionHandler<HashSet<Worker>, Worker> {
 
-    private static WorkersHandler singletoneMoment;
+    private static WorkersHandler workersHandler;
 
     private HashSet<Worker> workers;
     private final Date initDate;
@@ -31,9 +31,9 @@ public class WorkersHandler implements CollectionHandler<HashSet<Worker>, Worker
      * @return Single instance of handler.
      */
     public static WorkersHandler getInstance() {
-        if (singletoneMoment == null)
-            singletoneMoment = new WorkersHandler();
-        return singletoneMoment;
+        if (workersHandler == null)
+            workersHandler = new WorkersHandler();
+        return workersHandler;
     }
 
     /**
