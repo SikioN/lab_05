@@ -29,9 +29,9 @@ public class CommandExecutor {
                 commandManager.executeCommand(line.split(" "));
             } catch (CommandInterruptedException ex) {
                 if (mode.equals(CommandMode.CLI_UserMode))
-                    myLogger.log(Level.INFO, "Выполнение команды было прервано. Вы можете продолжать работу. Программа возвращена в безопасное состояние.");
+                    myLogger.log(Level.INFO, "The command execution has been stopped. You can continue. The program has been returned to a secure state.");
                 else
-                    myLogger.log(Level.INFO, "Команда была пропущена... Обработчик продолжает работу");
+                    myLogger.log(Level.INFO, "The command has been skipped... The handler is still working");
             }
         }
     }

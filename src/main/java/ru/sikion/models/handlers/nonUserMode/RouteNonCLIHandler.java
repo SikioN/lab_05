@@ -103,7 +103,7 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
             if (!validator.validate(result))
             {
                 System.out.println("Object's invalid, skipping...");
-                throw new BuildObjectException("Созданный элемент нарушает ограничения и не может быть добавлен в коллекцию!");
+                throw new BuildObjectException("The element created violates the limitations and cannot be added to the collection!");
             }
             System.out.println("Validate successful! Sending result...");
 
@@ -111,8 +111,8 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
 
         } catch (NumberFormatException | NullPointerException e)
         {
-            myLogger.log(Level.WARNING, "Объект будет пропущен. Устраните ошибку в скрипте и повторите попытку.");
-            throw new BuildObjectException("Предоставленные данные для построения объекта неверны. Воспользуйтесь ручным вводом или исправьте команду в скрипте.");
+            myLogger.log(Level.WARNING, "The object will be skipped. Correct the script error and try again.");
+            throw new BuildObjectException("The data provided to construct the object is incorrect. Use manual input or correct the command in the script.");
         }
     }
 

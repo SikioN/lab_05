@@ -44,7 +44,7 @@ public class XMLWriter implements BaseWriter {
                 System.out.println("Try to create this file manually: " + path);
                 System.out.println("Check access to file if it exists.");
                 System.out.println("Or change environment variable.");
-                System.out.println("Please, don't modify/remove this xml file. It goes to unknown consequences.");
+                System.out.println("Please, don't modify/remove this XML file. It goes to unknown consequences.");
             }
         }
     }
