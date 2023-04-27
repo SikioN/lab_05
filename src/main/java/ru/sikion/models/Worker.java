@@ -2,6 +2,8 @@ package ru.sikion.models;
 
 import ru.sikion.models.Identity.Status;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.Objects;
 
 /**
@@ -12,13 +14,13 @@ import java.util.Objects;
  * @since 1.0
  */
 public class Worker implements Comparable<Worker> {
-    private Long id;
+    private int id;
     private String name;
     private Coordinates coordinates;
     private java.util.Date creationDate;
     private Double salary;
     private java.util.Date startDate;
-    private java.time.ZonedDateTime endDate;
+    private java.time.LocalDate endDate;
     private Status status;
     private Person person;
 
@@ -27,7 +29,7 @@ public class Worker implements Comparable<Worker> {
      *
      * @return id of the worker
      */
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
@@ -81,7 +83,7 @@ public class Worker implements Comparable<Worker> {
      *
      * @return End date of the worker
      */
-    public java.time.ZonedDateTime getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
@@ -108,7 +110,7 @@ public class Worker implements Comparable<Worker> {
      *
      * @param id value of field id
      */
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -153,7 +155,7 @@ public class Worker implements Comparable<Worker> {
      *
      * @param endDate of value field endDate
      */
-    public void setEndDate(java.time.ZonedDateTime endDate) {
+    public void setEndDate(java.time.LocalDate endDate) {
         this.endDate = endDate;
     }
 
@@ -175,6 +177,16 @@ public class Worker implements Comparable<Worker> {
         this.person = person;
     }
 
+    /**
+     * Restrictions: Field cannot be null. The value of this field should be automatically generated.
+     *
+     * @param creationDate of value field creationDate
+     */
+    public void setCreationDate(Date creationDate) {
+        this.creationDate = creationDate;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -186,6 +198,7 @@ public class Worker implements Comparable<Worker> {
     public int hashCode() {
         return Objects.hash(getId(), getName(), getCoordinates(), getCreationDate(), getSalary(), getStartDate(), getEndDate(), getStatus(), getPerson());
     }
+
 
     @Override
     public String toString() {

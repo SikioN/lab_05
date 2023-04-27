@@ -1,7 +1,7 @@
 package ru.sikion.models.handlers;
 
 import ru.sikion.models.Worker;
-import ru.sikion.models.comparators.RouteComparator;
+import ru.sikion.models.comparators.WorkerComparator;
 import ru.sikion.models.validators.*;
 
 import java.time.Instant;
@@ -13,15 +13,15 @@ import java.util.*;
  * @since 1.0
  * @author Sikion
  */
-public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker> {
+public class WorkersHandler implements CollectionHandler<HashSet<Worker>, Worker> {
 
-    private static WorkerHandler singletonMoment;
+    private static WorkersHandler singletoneMoment;
 
-    private TreeMap workers;
+    private HashSet<Worker> workers;
     private final Date initDate;
 
-    private WorkerHandler() {
-        workers = new TreeMap<>();
+    private WorkersHandler() {
+        workers = new HashSet<>();
         initDate = Date.from(Instant.now());
     }
 
@@ -30,10 +30,10 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
      *
      * @return Single instance of handler.
      */
-    public static WorkerHandler getInstance() {
-        if (singletonMoment == null)
-            singletonMoment = new WorkerHandler();
-        return singletonMoment;
+    public static WorkersHandler getInstance() {
+        if (singletoneMoment == null)
+            singletoneMoment = new WorkersHandler();
+        return singletoneMoment;
     }
 
     /**
@@ -42,7 +42,7 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
      * @return Current collection
      */
     @Override
-    public TreeMap<Worker> getCollection()
+    public HashSet<Worker> getCollection()
     {
         return workers;
     }
@@ -53,7 +53,7 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
      * @param workers Collection
      */
     @Override
-    public void setCollection(TreeMap<Worker> workers) {
+    public void setCollection(HashSet<Worker> workers) {
         this.workers = workers;
         validateElements();
         sort();
@@ -77,13 +77,13 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
     }
 
     /**
-     * Sorts elements by ID Field in Worker.
+     * Sorts elements by ID Field in Route.
      */
     @Override
     public void sort() {
-        TreeMap sorted = new TreeMap<>();
+        HashSet<Worker> sorted = new HashSet<>();
 
-        for (Iterator<Worker> it = workers.stream().sorted(new RouteComparator()).iterator(); it.hasNext(); ) {
+        for (Iterator<Worker> it = workers.stream().sorted(new WorkerComparator()).iterator(); it.hasNext(); ) {
             Worker sortedItem = it.next();
 
             sorted.add(sortedItem);
@@ -129,11 +129,11 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
      */
     @Override
     public void validateElements() {
-        TreeMap ids = new TreeMap<Long, Object>(getCollection().size());
+        HashSet<Integer> ids = new HashSet<>(getCollection().size());
 
         for (Iterator<Worker> it = getCollection().iterator(); it.hasNext(); ) {
             Worker toValid = it.next();
-            Validator<? extends Worker> validator = new WorkerValidator();
+            Validator<Worker> validator = new WorkerValidator();
 
             if (!validator.validate(toValid) || !ids.add(toValid.getId()))
             {
@@ -144,26 +144,5 @@ public class WorkerHandler implements CollectionHandler<TreeMap<Worker>, Worker>
         }
     }
 
-    /**
-     * Gets min element by given comparator
-     *
-     * @param comparator Comparator to compare.
-     * @return Min element or null if collection is empty
-     */
-    @Override
-    public Worker getMin(Comparator<Worker> comparator) {
 
-        return getCollection().stream().min(comparator).orElse(null);
-    }
-
-    /**
-     * Gets max element by given comparator
-     *
-     * @param comparator Comparator to compare.
-     * @return Max element or null if collection is empty
-     */
-    @Override
-    public Worker getMax(Comparator<Worker> comparator) {
-        return getCollection().stream().max(comparator).orElse(null);
-    }
 }

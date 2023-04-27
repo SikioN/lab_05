@@ -2,9 +2,9 @@ package ru.sikion.models.validators;
 
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
-import java.util.TreeMap;
+import java.util.HashSet;
 import java.util.TreeSet;
 
 /**
@@ -24,9 +24,9 @@ public class IdValidator implements Validator<Integer> {
     public IdValidator() {
         ids = new TreeSet<>();
 
-        CollectionHandler<TreeMap<Object>, Worker> handler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> handler = WorkersHandler.getInstance();
 
-        handler.getCollection().forEach((value) -> ids.add(value.getId()));
+        handler.getCollection().forEach((value) -> ids.add(Math.toIntExact(value.getId())));
     }
 
     /**

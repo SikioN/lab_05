@@ -15,7 +15,7 @@ import java.util.logging.Logger;
  * @since 1.0
  * @author Sikion
  */
-public class CSVWriter implements BaseWriter {
+public class XMLWriter implements BaseWriter {
 
     private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
 

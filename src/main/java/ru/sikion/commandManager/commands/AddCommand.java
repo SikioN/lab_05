@@ -2,7 +2,7 @@ package ru.sikion.commandManager.commands;
 
 import ru.sikion.exceptions.BuildObjectException;
 import ru.sikion.models.handlers.*;
-import ru.sikion.models.handlers.userMode.RouteCLIHandler;
+import ru.sikion.models.handlers.userMode.WorkerCLIHandler;
 import ru.sikion.models.Worker;
 
 import java.util.HashSet;
@@ -21,7 +21,7 @@ public class AddCommand implements BaseCommand {
      */
     public AddCommand()
     {
-        handler = new RouteCLIHandler();
+        handler = new WorkerCLIHandler();
     }
     /**
      * Provides choosing handler
@@ -50,7 +50,7 @@ public class AddCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws BuildObjectException {
-        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkersHandler.getInstance();
 
         collectionHandler.addElementToCollection(handler.buildObject());
 

@@ -71,19 +71,4 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
      */
     void validateElements();
 
-    /**
-     * Gets min element by given comparator
-     *
-     * @param comparator Comparator to compare.
-     * @return Min element or null if collection is empty
-     */
-    E getMin(Comparator<E> comparator);
-
-    /**
-     * Gets max element by given comparator
-     *
-     * @param comparator Comparator to compare.
-     * @return Max element or null if collection is empty
-     */
-    E getMax(Comparator<E> comparator);
 }

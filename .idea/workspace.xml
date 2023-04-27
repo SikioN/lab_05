@@ -4,73 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Add validators">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandMode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/AddCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/BaseCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ClearCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ExecuteScriptCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ExitCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/HelpCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/InfoCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/SaveCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/UpdateCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/exceptions/BuildObjectException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/exceptions/CommandInterruptedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/exceptions/StreamInterruptedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/exceptions/UnknownCommandException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/exceptions/WrongAmountOfArgumentsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/BaseReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/BaseWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/editors/DateEditor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Utilities.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Coordinates.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/RouteComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/RouteDistanceComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/CollectionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/ModuleHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkerHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkerHandlers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/RouteCLIHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordYValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/IdValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" afterDir="false" />
+    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Commit version 1.2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Coordinates.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/EyeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/HairColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Person.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/Worker.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Check.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordinatesValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordXValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EndDateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EndDateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/NameValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/NameValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PassportIDValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PassportIDValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/SalaryValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/SalaryValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StartDateValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StartDateValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StatusValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/StatusValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/Validator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/Validator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/Utilities.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/CommandExecutor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/CommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/CommandMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/AddCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/BaseCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/ClearCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/ExecuteScriptCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/ExitCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/HelpCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/InfoCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/SaveCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/commandManager/commands/UpdateCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/exceptions/BuildObjectException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/exceptions/CommandInterruptedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/exceptions/StreamInterruptedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/exceptions/UnknownCommandException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/exceptions/WrongAmountOfArgumentsException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/BaseReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/BaseWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/Loader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/Saver.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/fileLogic/editors/DateEditor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Coordinates.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Identity/Country.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Identity/EyeColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Identity/HairColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Identity/Status.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/Worker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/comparators/WorkerComparator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/CollectionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/ModuleHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/WorkerHandlers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/WorkersHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkersHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/nonUserMode/WorkerNonCLIHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/CoordXValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/CoordYValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/EndDateValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/EyeColorValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/HairColorValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/IdValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/NameValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/NationalityValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/SalaryValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/StartDateValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/StatusValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/Validator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/src/main/java/ru/sikion/models/validators/WorkerValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/Задание1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/Задание2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/Задание3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab_05-PreFinal/Задание4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/AddCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ClearCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ClearCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/InfoCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/InfoCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/MinByCreationDateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/MinByCreationDateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveByIdCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveByIdCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/SaveCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/SaveCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/UpdateCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/UpdateCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/RouteComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/WorkerComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/CollectionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/CollectionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkerHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkerHandlers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/WorkerHandlers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/nonUserMode/RouteNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/nonUserMode/RouteNonCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/LocationCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/LocationCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/RouteCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/IdValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/IdValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PassportIDValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +117,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Test" />
+        <entry key="$PROJECT_DIR$" value="PreFinal" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,12 +143,13 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "PreFinal",
-    "last_opened_file_path": "D:/lab_05/src/main/java/ru/sikion",
+    "git-widget-placeholder": "Test13",
+    "last_opened_file_path": "D:/lab_05/src/main/java/ru/sikion/models/handlers/userMode",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -135,12 +164,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\lab_05\src\main\java\ru\sikion\models\handlers\userMode" />
       <recent name="D:\lab_05\src\main\java\ru\sikion" />
       <recent name="D:\lab_05\src1\models\validators" />
       <recent name="D:\lab_05\src1" />
       <recent name="D:\lab_05\src\main\java\ru\sikion\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\lab_05\src\main\java\ru\sikion\models\handlers\userMode" />
       <recent name="D:\lab_05\src\main\java1.ru.sikion" />
       <recent name="D:\lab_05\src1\models\Identity" />
       <recent name="D:\lab_05\src1\models" />
@@ -150,7 +181,7 @@
       <recent name="ru.sikion.models.validators" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.ru.sikion.main.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ru.sikion.Main" />
       <module name="lab_05" />
@@ -164,8 +195,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ru.sikion.main.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ru.sikion.main.Main" />
+      <module name="lab_05" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.sikion.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ru.sikion.main.Main" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -202,7 +247,17 @@
       <workItem from="1681210168562" duration="2928000" />
       <workItem from="1681338023350" duration="375000" />
       <workItem from="1681338445124" duration="620000" />
-      <workItem from="1681339082825" duration="10468000" />
+      <workItem from="1681339082825" duration="11108000" />
+      <workItem from="1682568344936" duration="555000" />
+      <workItem from="1682568921951" duration="344000" />
+      <workItem from="1682569325904" duration="47000" />
+      <workItem from="1682569599760" duration="30000" />
+      <workItem from="1682569636408" duration="8000" />
+      <workItem from="1682569691762" duration="28000" />
+      <workItem from="1682569758067" duration="17000" />
+      <workItem from="1682569800447" duration="3286000" />
+      <workItem from="1682576032593" duration="338000" />
+      <workItem from="1682576712330" duration="1297000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1678043317673</created>
@@ -239,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1681209260203</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit version 1.2">
+      <created>1681377698675</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681377698675</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +312,8 @@
     <MESSAGE value="Create project" />
     <MESSAGE value="First push" />
     <MESSAGE value="Add validators" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add validators" />
+    <MESSAGE value="Commit version 1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit version 1.2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

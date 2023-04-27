@@ -2,7 +2,7 @@ package ru.sikion.commandManager.commands;
 
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
 import java.util.Date;
 import java.util.HashSet;
@@ -26,7 +26,7 @@ public class MinByCreationDateCommand implements BaseCommand{
 
     @Override
     public void execute(String[] args) {
-        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkersHandler.getInstance();
         Date min = collectionHandler.getCollection().stream().map(Worker::getCreationDate).min(Date::compareTo).orElse(null);
 
         if (min == null)
