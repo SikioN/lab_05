@@ -80,20 +80,13 @@ public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
             if (values.get(coordsIndex) != null) {
                 System.out.println("Generating coordinates...");
                 Coordinates coordinates = new Coordinates();
-//                coordinates.setX(Double.parseDouble(values.get(coordsIndex)));
-                System.out.println("Coords X: " + coordinates.getX());
-                coordinates.setY(Float.valueOf(values.get(coordsIndex + 1)));
-                System.out.println("Coords Y: " + coordinates.getY());
+                coordinates.setX(Integer.parseInt(values.get(coordsIndex)));
+                System.out.println("Coordinates X: " + coordinates.getX());
+                coordinates.setY(Float.parseFloat(values.get(coordsIndex + 1)));
+                System.out.println("Coordinates Y: " + coordinates.getY());
                 result.setCoordinates(coordinates);
             }
-            System.out.println("Coords: " + result.getCoordinates());
-//            result.setFrom(generateLocation(fromIndex, values));
-//            System.out.println("From: " + result.getFrom());
-//            result.setTo(generateLocation(toIndex, values));
-//            System.out.println("To: " + result.getTo());
-//            result.setDistance(Integer.parseInt(values.get(values.size() - 1)));
-//            System.out.println("Distance: " + result.getDistance());
-//            result.setCreationDate(Date.from(Instant.now()));
+            System.out.println("Coordinates: " + result.getCoordinates());
             System.out.println("Generated at: " + result.getCreationDate());
             System.out.println("Object generated! Validating result...");
 
