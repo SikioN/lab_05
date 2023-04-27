@@ -12,6 +12,6 @@ public class HairColorValidator implements Validator<HairColor> {
      */
     @Override
     public boolean validate(HairColor value) {
-        return value != null;
+        return true;
     }
 }

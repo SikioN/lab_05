@@ -7,7 +7,7 @@ import ru.sikion.exceptions.UnknownCommandException;
 import ru.sikion.exceptions.WrongAmountOfArgumentsException;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.ModuleHandler;
-import ru.sikion.models.handlers.nonUserMode.RouteNonCLIHandler;
+import ru.sikion.models.handlers.nonUserMode.WorkerNonCLIHandler;
 import ru.sikion.models.handlers.userMode.WorkerCLIHandler;
 
 import java.util.LinkedHashMap;
@@ -73,7 +73,7 @@ public class CommandManager {
         switch (mode)
         {
             case CLI_UserMode -> handler = new WorkerCLIHandler();
-            case NonUserMode -> handler = new RouteNonCLIHandler(scanner);
+            case NonUserMode -> handler = new WorkerNonCLIHandler(scanner);
         }
 
         commands.put("add", new AddCommand(handler));

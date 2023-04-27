@@ -198,4 +198,5 @@ public enum Country {
     YEMEN,
     ZAMBIA,
     ZIMBABWE,
+    WORD;
 }
