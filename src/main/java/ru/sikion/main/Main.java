@@ -11,7 +11,7 @@ import java.util.HashSet;
 
 /**
  * Program entry point class. Contains main() method.
- * This program is managing collection of type <code>HashSet&#8249;Route></code>
+ * This program is managing collection of type <code>HashSet&#8249;worker></code>
  *
  * @since 1.0
  * @author Sikion

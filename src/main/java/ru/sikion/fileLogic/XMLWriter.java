@@ -27,9 +27,9 @@ public class XMLWriter implements BaseWriter {
 
             writer.println("<?xml version=\"1.0\"?>");
             writer.println();
-            writer.println("<routes>");
+            writer.println("<workers>");
             values.forEach((address, value) -> writeElement(writer, address, getNextAddress(values, address), value));
-            writer.println("</routes>");
+            writer.println("</workers>");
 
         } catch (FileNotFoundException e) {
             File xml = new File(path);
