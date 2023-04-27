@@ -4,7 +4,7 @@ import ru.sikion.exceptions.WrongAmountOfArgumentsException;
 import ru.sikion.fileLogic.Saver;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
 import java.util.HashSet;
 
@@ -28,7 +28,7 @@ public class SaveCommand implements BaseCommand {
     @Override
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
         System.out.println("Saving...");
-        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkersHandler.getInstance();
         Saver<HashSet<Worker>, Worker> saver = new Saver<>(Worker.class);
 
         saver.saveCollection(collectionHandler.getCollection(), "lab5");

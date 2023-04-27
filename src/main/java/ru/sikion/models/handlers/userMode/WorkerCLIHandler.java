@@ -2,10 +2,9 @@ package ru.sikion.models.handlers.userMode;
 
 import ru.sikion.exceptions.BuildObjectException;
 import ru.sikion.exceptions.StreamInterruptedException;
-import ru.sikion.Utilities;
+import ru.sikion.main.Utilities;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.*;
-import ru.sikion.models.validators.DistanceValidator;
 import ru.sikion.models.validators.NameValidator;
 import ru.sikion.models.validators.Validator;
 
@@ -20,7 +19,7 @@ import java.util.Scanner;
  * @since 1.0
  * @author Sikion
  */
-public class RouteCLIHandler implements ModuleHandler<Worker> {
+public class WorkerCLIHandler implements ModuleHandler<Worker> {
     /**
      * Method for create fully validated objects by CLI (userMode).
      *
@@ -38,7 +37,7 @@ public class RouteCLIHandler implements ModuleHandler<Worker> {
             Scanner scanner = new Scanner(System.in);
 
             // id
-            result.setId(RouteHandlers.generateID());
+            result.setId(WorkerHandlers.generateID());
 
             // name
             Validator<String> nameValidator = new NameValidator();
@@ -66,10 +65,10 @@ public class RouteCLIHandler implements ModuleHandler<Worker> {
             System.out.println("Starting \"from\" field setup... (Type: Location)");
             System.out.print("This field may be skipped to fill. Skip? [y/n] ");
             String answer = scanner.next();
-            if (!answer.equalsIgnoreCase("y")) {
-                LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
-                result.setFrom(locationCLIHandler.buildObject());
-            }
+//            if (!answer.equalsIgnoreCase("y")) {
+//                LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
+//                result.setFrom(locationCLIHandler.buildObject());
+//            }
             if (Utilities.hasNextLineOrThrow(scanner)) {
                 scanner.nextLine();
             }
@@ -78,38 +77,15 @@ public class RouteCLIHandler implements ModuleHandler<Worker> {
             System.out.println("Starting \"to\" field setup... (Type: Location)");
             System.out.print("This field may be skipped to fill. Skip? [y/n] ");
             answer = scanner.next();
-            if (!answer.equalsIgnoreCase("y")) {
-                LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
-                result.setTo(locationCLIHandler.buildObject());
-            }
+//            if (!answer.equalsIgnoreCase("y")) {
+//                LocationCLIHandler locationCLIHandler = new LocationCLIHandler();
+//                result.setTo(locationCLIHandler.buildObject());
+//            }
             if (Utilities.hasNextLineOrThrow(scanner)) {
                 scanner.nextLine();
             }
 
-            // distance
-            while (true) {
-                try {
-                    DistanceValidator validator = new DistanceValidator();
-                    System.out.println("Enter the value of distance (Type: int (default value: 0))");
-                    int value = 0;
-                    if (Utilities.hasNextLineOrThrow(scanner)) {
-                        String line = scanner.nextLine();
-                        if (!line.isEmpty())
-                            value = Integer.parseInt(line);
-                    }
-                    if (!validator.validate(value)) {
-                        System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Number should be grater than 1.");
-                        continue;
-                    }
-                    result.setDistance(value);
-                } catch (InputMismatchException | NumberFormatException e) {
-                    System.out.println("Wrong input! Try again.");
-                    System.out.println("You should enter a number in range [-2147483648; 2147483647], it shouldn't be decimal.");
-                    continue;
-                }
-                break;
-            }
+
 
             // creationDate
             Date creationDate = Date.from(Instant.now());

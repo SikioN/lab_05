@@ -4,7 +4,7 @@ import ru.sikion.exceptions.BuildObjectException;
 import ru.sikion.models.Coordinates;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.ModuleHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkerHandlers;
 import ru.sikion.models.validators.WorkerValidator;
 import ru.sikion.models.validators.Validator;
 
@@ -76,26 +76,26 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
         }
 
         try {
-            result.setId(WorkerHandler.generateID());
+            result.setId(WorkerHandlers.generateID());
             result.setName(values.get(0));
             System.out.println("Name: " + result.getName());
             if (values.get(coordsIndex) != null) {
                 System.out.println("Generating coordinates...");
                 Coordinates coordinates = new Coordinates();
-                coordinates.setX(Double.parseDouble(values.get(coordsIndex)));
+//                coordinates.setX(Double.parseDouble(values.get(coordsIndex)));
                 System.out.println("Coords X: " + coordinates.getX());
                 coordinates.setY(Float.valueOf(values.get(coordsIndex + 1)));
                 System.out.println("Coords Y: " + coordinates.getY());
                 result.setCoordinates(coordinates);
             }
             System.out.println("Coords: " + result.getCoordinates());
-            result.setFrom(generateLocation(fromIndex, values));
-            System.out.println("From: " + result.getFrom());
-            result.setTo(generateLocation(toIndex, values));
-            System.out.println("To: " + result.getTo());
-            result.setDistance(Integer.parseInt(values.get(values.size() - 1)));
-            System.out.println("Distance: " + result.getDistance());
-            result.setCreationDate(Date.from(Instant.now()));
+//            result.setFrom(generateLocation(fromIndex, values));
+//            System.out.println("From: " + result.getFrom());
+//            result.setTo(generateLocation(toIndex, values));
+//            System.out.println("To: " + result.getTo());
+//            result.setDistance(Integer.parseInt(values.get(values.size() - 1)));
+//            System.out.println("Distance: " + result.getDistance());
+//            result.setCreationDate(Date.from(Instant.now()));
             System.out.println("Generated at: " + result.getCreationDate());
             System.out.println("Object generated! Validating result...");
 
@@ -116,21 +116,21 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
         }
     }
 
-    private Location generateLocation(int toIndex, ArrayList<String> values) {
-        Location obj = null;
-        if (values.get(toIndex) != null)
-        {
-            System.out.println("Generating location...");
-            obj = new Location();
-            obj.setX(Float.parseFloat(values.get(toIndex)));
-            System.out.println("X: " + obj.getX());
-            obj.setY(Long.valueOf(values.get(toIndex + 1)));
-            System.out.println("Y: " + obj.getX());
-            obj.setZ(Long.valueOf(values.get(toIndex + 2)));
-            System.out.println("Z: " + obj.getX());
-            obj.setName(values.get(toIndex + 3));
-            System.out.println("Name:" + obj.getName());
-        }
-        return obj;
-    }
+//    private Location generateLocation(int toIndex, ArrayList<String> values) {
+//        Location obj = null;
+//        if (values.get(toIndex) != null)
+//        {
+//            System.out.println("Generating location...");
+//            obj = new Location();
+//            obj.setX(Float.parseFloat(values.get(toIndex)));
+//            System.out.println("X: " + obj.getX());
+//            obj.setY(Long.valueOf(values.get(toIndex + 1)));
+//            System.out.println("Y: " + obj.getX());
+//            obj.setZ(Long.valueOf(values.get(toIndex + 2)));
+//            System.out.println("Z: " + obj.getX());
+//            obj.setName(values.get(toIndex + 3));
+//            System.out.println("Name:" + obj.getName());
+//        }
+//        return obj;
+//    }
 }

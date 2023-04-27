@@ -4,7 +4,7 @@ import ru.sikion.exceptions.WrongAmountOfArgumentsException;
 import ru.sikion.main.Utilities;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
 import java.util.HashSet;
 import java.util.Objects;
@@ -34,9 +34,9 @@ public class RemoveByIdCommand implements BaseCommand {
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
         Utilities.checkArgumentsOrThrow(args.length, 1);
 
-        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkersHandler.getInstance();
 
-        Long finalId = Utilities.handleUserInputID(args[1]);
+        Integer finalId = Utilities.handleUserInputID(args[1]);
         if (finalId == null) return;
 
         collectionHandler.getCollection().removeIf(worker -> Objects.equals(worker.getId(), finalId));

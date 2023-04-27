@@ -20,20 +20,20 @@ public class WorkerHandlers {
      *
      * @return value for ID field.
      */
-    public static Long generateID()
+    public static int generateID()
     {
-        CollectionHandler<HashSet<Worker>, Worker> handler = WorkerHandler.getInstance();
-        // id
+        CollectionHandler<HashSet<Worker>, Worker> handler = WorkersHandler.getInstance();
+
         Validator<Integer> idValidator = new IdValidator();
         var lastObj = handler.getLastElement();
-        long lastId = 1L;
+        int lastId = 1;
         if (lastObj != null)
         {
-            lastId = lastObj.getId() + 1;
+            lastId = Math.toIntExact(lastObj.getId() + 1);
         }
         while (!idValidator.validate(lastId))
         {
-            lastId = ThreadLocalRandom.current().nextLong(1, Long.MAX_VALUE);
+            lastId = Math.toIntExact(ThreadLocalRandom.current().nextInt(1, Integer.MAX_VALUE));
         }
         System.out.println("ID Field (auto-generated): " + lastId);
         return lastId;

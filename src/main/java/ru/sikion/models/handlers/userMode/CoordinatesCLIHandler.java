@@ -39,11 +39,11 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
                 try {
                     CoordXValidator xValidator = new CoordXValidator();
                     System.out.println("Enter the value of x (Type: double (default value: 0.0d))");
-                    double value = 0;
+                    int value = 0;
                     if (Utilities.hasNextLineOrThrow(scanner)) {
                         String line = scanner.nextLine();
                         if (!line.isEmpty())
-                            value = Double.parseDouble(line);
+                            value = Integer.parseInt(line);
                     }
                     if (xValidator.validate(value))
                         result.setX(value);

@@ -5,7 +5,7 @@ import ru.sikion.commandManager.CommandMode;
 import ru.sikion.fileLogic.Loader;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
 import java.util.HashSet;
 
@@ -28,7 +28,7 @@ public class Main {
      * @param args Command-line arguments
      */
     public static void main(String[] args) {
-        CollectionHandler<HashSet<Worker>, Worker> handler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> handler = WorkersHandler.getInstance();
 
         // load collection
         Loader<HashSet<Worker>, Worker> loader = new Loader<>(handler.getCollection().getClass(), Worker.class);

@@ -87,7 +87,7 @@ public class Loader<T extends Collection<E>, E> {
             System.exit(-1);
         }
 
-        BaseReader reader = new CSVReader();
+        BaseReader reader = new XMLReader();
 
         resultCollection = loadFromFile(xmlPath, reader);
 

@@ -8,7 +8,7 @@ import ru.sikion.exceptions.WrongAmountOfArgumentsException;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.ModuleHandler;
 import ru.sikion.models.handlers.nonUserMode.RouteNonCLIHandler;
-import ru.sikion.models.handlers.userMode.RouteCLIHandler;
+import ru.sikion.models.handlers.userMode.WorkerCLIHandler;
 
 import java.util.LinkedHashMap;
 import java.util.Optional;
@@ -45,12 +45,7 @@ public class CommandManager {
         commands.put("save", new SaveCommand());
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
-        commands.put("add_if_max", new AddIfMaxCommand());
-        commands.put("add_if_min", new AddIfMinCommand());
-        commands.put("remove_greater", new RemoveGreaterCommand());
         commands.put("min_by_creation_date", new MinByCreationDateCommand());
-        commands.put("count_greater_than_distance", new CountGreaterThanDistanceCommand());
-        commands.put("print_field_ascending_distance", new PrintFieldDistanceAscendingCommand());
     }
 
     /**
@@ -73,21 +68,16 @@ public class CommandManager {
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
         commands.put("min_by_creation_date", new MinByCreationDateCommand());
-        commands.put("count_greater_than_distance", new CountGreaterThanDistanceCommand());
-        commands.put("print_field_ascending_distance", new PrintFieldDistanceAscendingCommand());
 
         ModuleHandler<Worker> handler = null;
         switch (mode)
         {
-            case CLI_UserMode -> handler = new RouteCLIHandler();
+            case CLI_UserMode -> handler = new WorkerCLIHandler();
             case NonUserMode -> handler = new RouteNonCLIHandler(scanner);
         }
 
         commands.put("add", new AddCommand(handler));
         commands.put("update", new UpdateCommand(handler));
-        commands.put("add_if_max", new AddIfMaxCommand(handler));
-        commands.put("add_if_min", new AddIfMinCommand(handler));
-        commands.put("remove_greater", new RemoveGreaterCommand(handler));
     }
 
     /**

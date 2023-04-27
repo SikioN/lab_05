@@ -1,7 +1,7 @@
 package ru.sikion.main;
 
-import exceptions.StreamInterruptedException;
-import exceptions.WrongAmountOfArgumentsException;
+import ru.sikion.exceptions.StreamInterruptedException;
+import ru.sikion.exceptions.WrongAmountOfArgumentsException;
 
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Utilities {
         return !str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 
-    public static Long handleUserInputID(String input) {
+    public static Integer handleUserInputID(String input) {
         if (Utilities.isNotNumeric(input)) {
             System.out.println("Provided argument id: \"" + input + "\" is not a number! Try again.");
             return null;
@@ -19,9 +19,9 @@ public class Utilities {
             return null;
         }
 
-        Long id = null;
+        int id = Integer.parseInt(null);
         try {
-            id = Long.valueOf(input);
+            id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
             System.out.println("Provided argument: \"" + input + "\" is too large for ID field. Try again.");
         }

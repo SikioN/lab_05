@@ -16,9 +16,11 @@ public class WorkerValidator implements Validator<Worker> {
     public boolean validate(Worker worker) {
         Validator<Integer> idValidate = (id) -> id != null && id > 0;
 
-        if (idValidate.validate(worker.getId()) && new NameValidator().validate(worker.getName())) {
-            new CoordXValidator().validate(Optional.of(worker).map(Worker::getCoordinates).map(Coordinates::getX).orElse(0d));
-        }
-        return false;
+        return idValidate.validate(Math.toIntExact(worker.getId())) &&
+                new NameValidator().validate(worker.getName()) &&
+                new SalaryValidator().validate(worker.getSalary()) &&
+                new StartDateValidator().validate(worker.getStartDate()) &&
+                new EndDateValidator().validate(worker.getEndDate()) &&
+                new StatusValidator().validate(worker.getStatus());
     }
 }

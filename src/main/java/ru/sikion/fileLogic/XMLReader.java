@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
  * @since 1.0
  * @author Sikion
  */
-public class CSVReader implements BaseReader {
+public class XMLReader implements BaseReader {
 
     private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
     private final LinkedHashMap<String[], String> resultParsing;
@@ -27,7 +27,7 @@ public class CSVReader implements BaseReader {
     /**
      * Default constructor of XMLReader.
      */
-    public CSVReader()
+    public XMLReader()
     {
         resultParsing = new LinkedHashMap<>();
         values = new ArrayDeque<>();

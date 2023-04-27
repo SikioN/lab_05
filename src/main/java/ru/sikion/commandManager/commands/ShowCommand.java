@@ -2,7 +2,7 @@ package ru.sikion.commandManager.commands;
 
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
-import ru.sikion.models.handlers.WorkerHandler;
+import ru.sikion.models.handlers.WorkersHandler;
 
 import java.util.HashSet;
 
@@ -25,7 +25,7 @@ public class ShowCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) {
-        CollectionHandler<HashSet<Worker>, Worker> handler = WorkerHandler.getInstance();
+        CollectionHandler<HashSet<Worker>, Worker> handler = WorkersHandler.getInstance();
 
         handler.getCollection().forEach(System.out::println);
 
