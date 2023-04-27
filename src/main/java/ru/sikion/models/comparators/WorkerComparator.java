@@ -13,6 +13,6 @@ import java.util.Comparator;
 public class WorkerComparator implements Comparator<Worker> {
     @Override
     public int compare(Worker o1, Worker o2) {
-        return Long.compare(o1.getId(), o2.getId());
+        return Integer.compare(o1.getId(), o2.getId());
     }
 }

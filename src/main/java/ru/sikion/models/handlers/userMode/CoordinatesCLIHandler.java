@@ -38,7 +38,7 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
             while (true) {
                 try {
                     CoordXValidator xValidator = new CoordXValidator();
-                    System.out.println("Enter the value of x (Type: double (default value: 0.0d))");
+                    System.out.println("Enter the value of x (Type: int)");
                     int value = 0;
                     if (Utilities.hasNextLineOrThrow(scanner)) {
                         String line = scanner.nextLine();
@@ -49,7 +49,6 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
                         result.setX(value);
                     else {
                         System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: IEEE 751 Double value. Should be greater than -107.");
                         continue;
                     }
                 } catch (InputMismatchException | NumberFormatException e) {
@@ -63,7 +62,7 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
             while (true) {
                 try {
                     CoordYValidator yValidator = new CoordYValidator();
-                    System.out.println("Enter the value of y (Type: Float)");
+                    System.out.println("Enter the value of y (Type: float)");
                     Float value = null;
                     if (Utilities.hasNextLineOrThrow(scanner)) {
                         String line = scanner.nextLine();
@@ -74,12 +73,12 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
                         result.setY(value);
                     else {
                         System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: IEEE 754 Float number. Not null and should be greater than -39.");
+                        System.out.println("Restrictions: float number. Not null and should be greater than -487.");
                         continue;
                     }
                 } catch (InputMismatchException | NumberFormatException e) {
                     System.out.println("Wrong input! Try again.");
-                    System.out.println("You should enter a real number, matches with IEEE 754 Float value standard (not so big/small).");
+                    System.out.println("You should enter a real number, matches float value standard (not so big/small).");
                     continue;
                 }
                 break;
@@ -89,7 +88,7 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
 
             return result;
         } catch (StreamInterruptedException e) {
-            throw new BuildObjectException("Во время конструирования объекта произошла ошибка: " + e.getMessage());
+            throw new BuildObjectException("An error occurred while designing the object: " + e.getMessage());
         }
     }
 }

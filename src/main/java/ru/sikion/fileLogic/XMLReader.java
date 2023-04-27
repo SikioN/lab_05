@@ -50,7 +50,7 @@ public class XMLReader implements BaseReader {
             return resultParsing;
         }
 
-        scanner.nextLine(); // skip 1st line
+        scanner.nextLine();
 
         while (scanner.hasNext())
         {

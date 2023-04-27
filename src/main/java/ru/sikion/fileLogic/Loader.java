@@ -49,7 +49,7 @@ public class Loader<T extends Collection<E>, E> {
         }
         catch (Exception e)
         {
-            myLogger.log(Level.SEVERE, "В программе возникла проблема: " + e);
+            myLogger.log(Level.SEVERE, "There was a problem with the program: " + e);
         }
     }
 
@@ -81,9 +81,9 @@ public class Loader<T extends Collection<E>, E> {
     public T loadFromXMLbyEnvKey(String envKey) {
         String xmlPath = System.getenv(envKey);
         if (xmlPath == null) {
-            myLogger.log(Level.SEVERE, "Отсутствует переменная окружения с путем к загрузочному файлу!");
-            myLogger.log(Level.INFO, "Задайте переменную окружения с именем \"lab5\", поместив туда полный путь к XML файлу.");
-            myLogger.log(Level.WARNING, "Выполнение программы не может быть продолжено.");
+            myLogger.log(Level.SEVERE, "No environment variable with path to boot file!");
+            myLogger.log(Level.INFO, "Specify an environment variable named \"lab5\", by placing the full path to the XML file there.");
+            myLogger.log(Level.WARNING, "The programme cannot continue.");
             System.exit(-1);
         }
 
@@ -109,12 +109,12 @@ public class Loader<T extends Collection<E>, E> {
                 fillCollection(parsedValues);
 
         } catch (AccessDeniedException ex) {
-            System.out.println("/ ! \\ File reading failed because application cannot access to this file. Contact your administrator and ask him to write \'sudo chmod 755 $lab5\'");
+            System.out.println("/ ! \\ File reading failed because application cannot access to this file.");
         } catch (CharacterCodingException ex) {
-            System.out.println("/ ! \\ File reading filed because system cannot understand file-coding. Contact your administrator.");
+            System.out.println("/ ! \\ File reading filed because system cannot understand file-coding.");
         } catch (IOException e) {
             System.out.println("/ ! \\ Something went wrong during reading the file. Loading was skipped...");
-            myLogger.log(Level.SEVERE, "Во время работы с вводом-выводом произошла непредвиденная ошибка! " + e.getMessage());
+            myLogger.log(Level.SEVERE, "An unforeseen error occurred while working with input-output! " + e.getMessage());
         } catch (Exception e) {
             System.out.println("/ ! \\ File reading failed due to broken XML file. Fix it manually & try again.");
         }
@@ -140,7 +140,7 @@ public class Loader<T extends Collection<E>, E> {
             currentIndex = Integer.parseInt(matcher.group());
         }
         else {
-            myLogger.log (Level.WARNING, "Поле имеет некорректный адрес и будет пропущено. " + Arrays.toString(pathToField));
+            myLogger.log (Level.WARNING, "The field has an incorrect address and will be skipped. " + Arrays.toString(pathToField));
             return;
         }
         if (latestKnownIndex != currentIndex)
@@ -172,7 +172,7 @@ public class Loader<T extends Collection<E>, E> {
                 setField(fullClassOfElement, pathToField, 2, s, buildingObject);
 
             } catch (NoSuchFieldException | InstantiationException | IllegalAccessException e) {
-                myLogger.log(Level.SEVERE, "Поле не было обнаружено: " + e);
+                myLogger.log(Level.SEVERE, "The field was not found: " + e);
             }
         }
     }
@@ -203,8 +203,8 @@ public class Loader<T extends Collection<E>, E> {
             }
             catch (NullPointerException | NumberFormatException | DateTimeParseException e)
             {
-                myLogger.log(Level.WARNING, "XML файл поврежден. Строка с данными " + value + " (Адрес: " + Arrays.toString(fullPath) + ") была пропущена.");
-                myLogger.log(Level.INFO, "Если вы считаете, что произошла ошибка, добавьте в регистр обработчик. Взгляните на Loader.setupConverter в Javadoc или свяжитесь с администратором.");
+                myLogger.log(Level.WARNING, "XML file is corrupted. Data string " + value + " (Address: " + Arrays.toString(fullPath) + ") was skipped.");
+                myLogger.log(Level.INFO, "If you think that an error occurred, add a handler to the register. Take a look at Loader.setupConverter in Javadoc.");
             }
         }
     }
@@ -222,9 +222,9 @@ public class Loader<T extends Collection<E>, E> {
         {
             result = fullClassOfElement.newInstance();
         } catch (InstantiationException e) {
-            myLogger.log(Level.SEVERE, "При инициализации элемента возникла проблема! " + e.getMessage());
+            myLogger.log(Level.SEVERE, "The element was initialized with a problem! " + e.getMessage());
         } catch (IllegalAccessException e) {
-            myLogger.log(Level.SEVERE, "Ошибка доступа! " + e.getMessage());
+            myLogger.log(Level.SEVERE, "Access error! " + e.getMessage());
         }
         return result;
     }

@@ -96,9 +96,9 @@ public class CommandManager {
      */
     public void executeCommand(String[] args) {
         try {
-            Optional.ofNullable(commands.get(args[0])).orElseThrow(() -> new UnknownCommandException("Указанная команда не была обнаружена")).execute(args);
+            Optional.ofNullable(commands.get(args[0])).orElseThrow(() -> new UnknownCommandException("The specified command was not detected...")).execute(args);
         } catch (IllegalArgumentException | NullPointerException e) {
-            myLogger.log(Level.SEVERE, "Выполнение команды пропущено из-за неправильных предоставленных аргументов! (" + e.getMessage() + ")");
+            myLogger.log(Level.SEVERE, "Command execution is skipped due to incorrect provided arguments! (" + e.getMessage() + ")");
             throw new CommandInterruptedException(e);
         } catch (BuildObjectException | UnknownCommandException e) {
             myLogger.log(Level.SEVERE, e.getMessage());
@@ -107,7 +107,7 @@ public class CommandManager {
             myLogger.log(Level.SEVERE, "Wrong amount of arguments! " + e.getMessage());
             throw new CommandInterruptedException(e);
         } catch (Exception e) {
-            myLogger.log(Level.SEVERE, "В командном менеджере произошла непредвиденная ошибка! " + e.getMessage());
+            myLogger.log(Level.SEVERE, "An unexpected error occurred in the command manager! " + e.getMessage());
             throw new CommandInterruptedException(e);
         }
     }

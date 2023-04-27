@@ -97,7 +97,7 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             return result;
 
         } catch (StreamInterruptedException e) {
-            throw new BuildObjectException("Во время конструирования объекта произошла ошибка: " + e.getMessage());
+            throw new BuildObjectException("An error occurred while designing the object: " + e.getMessage());
         }
     }
 }
