@@ -3,6 +3,7 @@ package ru.sikion.main;
 import ru.sikion.commandManager.CommandExecutor;
 import ru.sikion.commandManager.CommandMode;
 import ru.sikion.fileLogic.Loader;
+import ru.sikion.models.Identity.EyeColor;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
 import ru.sikion.models.handlers.WorkersHandler;
@@ -41,5 +42,7 @@ public class Main {
         System.out.println("Now you can enter the commands. Use help for reference.");
         CommandExecutor executor = new CommandExecutor();
         executor.startExecuting(System.in, CommandMode.CLI_UserMode);
+
     }
+
 }

@@ -12,6 +12,6 @@ public class EyeColorValidator implements Validator<EyeColor> {
      */
     @Override
     public boolean validate(EyeColor value) {
-        return true;
+        return value != null;
     }
 }
