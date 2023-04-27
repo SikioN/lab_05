@@ -8,9 +8,7 @@ import ru.sikion.models.handlers.WorkerHandlers;
 import ru.sikion.models.validators.WorkerValidator;
 import ru.sikion.models.validators.Validator;
 
-import java.time.Instant;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -21,7 +19,7 @@ import java.util.logging.Logger;
  * @since 1.1
  * @author Sikion
  */
-public class RouteNonCLIHandler implements ModuleHandler<Worker> {
+public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
 
     private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
 
@@ -32,7 +30,7 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
      *
      * @param scanner Command scanner for reading argument
      */
-    public RouteNonCLIHandler(Scanner scanner) {
+    public WorkerNonCLIHandler(Scanner scanner) {
         this.scanner = scanner;
     }
 
@@ -116,21 +114,4 @@ public class RouteNonCLIHandler implements ModuleHandler<Worker> {
         }
     }
 
-//    private Location generateLocation(int toIndex, ArrayList<String> values) {
-//        Location obj = null;
-//        if (values.get(toIndex) != null)
-//        {
-//            System.out.println("Generating location...");
-//            obj = new Location();
-//            obj.setX(Float.parseFloat(values.get(toIndex)));
-//            System.out.println("X: " + obj.getX());
-//            obj.setY(Long.valueOf(values.get(toIndex + 1)));
-//            System.out.println("Y: " + obj.getX());
-//            obj.setZ(Long.valueOf(values.get(toIndex + 2)));
-//            System.out.println("Z: " + obj.getX());
-//            obj.setName(values.get(toIndex + 3));
-//            System.out.println("Name:" + obj.getName());
-//        }
-//        return obj;
-//    }
 }

@@ -1,5 +1,8 @@
 package ru.sikion.models;
 
+import ru.sikion.models.Identity.Country;
+import ru.sikion.models.Identity.EyeColor;
+import ru.sikion.models.Identity.HairColor;
 import ru.sikion.models.Identity.Status;
 
 import java.time.LocalDate;
@@ -22,7 +25,9 @@ public class Worker implements Comparable<Worker> {
     private java.util.Date startDate;
     private java.time.LocalDate endDate;
     private Status status;
-    private Person person;
+    private Country nationality;
+    private EyeColor eyeColor;
+    private HairColor hairColor;
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
@@ -90,21 +95,36 @@ public class Worker implements Comparable<Worker> {
     /**
      * Restrictions: Field can be null.
      *
-     * @return Status of the worker
+     * @return nationality of worker
      */
-    public Status getStatus() {
-        return status;
+    public Country getNationality() {
+        return nationality;
     }
 
     /**
      * Restrictions: Field can be null.
      *
-     * @return Person of the worker
+     * @return color of hair
      */
-    public Person getPerson() {
-        return person;
+    public HairColor getHairColor() {
+        return hairColor;
     }
-
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @return Color of eye
+     */
+    public EyeColor getEyeColor() {
+        return eyeColor;
+    }
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @return Status of the worker
+     */
+    public Status getStatus() {
+        return status;
+    }
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
      *
@@ -171,11 +191,31 @@ public class Worker implements Comparable<Worker> {
     /**
      * Restrictions: Field can be null.
      *
-     * @param person of value field person
+     * @param nationality of value field Country
      */
-    public void setPerson(Person person) {
-        this.person = person;
+    public void setCountry(Country nationality) {
+        this.nationality = nationality;
     }
+
+
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @param hairColor of value field hair color
+     */
+    public void setCountry(HairColor hairColor) {
+        this.hairColor = hairColor;
+    }
+
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @param eyeColor of value field eye color
+     */
+    public void setCountry(EyeColor eyeColor) {
+        this.eyeColor = eyeColor;
+    }
+
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be automatically generated.
@@ -191,12 +231,12 @@ public class Worker implements Comparable<Worker> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Worker worker)) return false;
-        return Objects.equals(getId(), worker.getId()) && Objects.equals(getName(), worker.getName()) && Objects.equals(getCoordinates(), worker.getCoordinates()) && Objects.equals(getCreationDate(), worker.getCreationDate()) && Objects.equals(getSalary(), worker.getSalary()) && Objects.equals(getStartDate(), worker.getStartDate()) && Objects.equals(getEndDate(), worker.getEndDate()) && getStatus() == worker.getStatus() && Objects.equals(getPerson(), worker.getPerson());
+        return Objects.equals(getId(), worker.getId()) && Objects.equals(getName(), worker.getName()) && Objects.equals(getCoordinates(), worker.getCoordinates()) && Objects.equals(getCreationDate(), worker.getCreationDate()) && Objects.equals(getSalary(), worker.getSalary()) && Objects.equals(getStartDate(), worker.getStartDate()) && Objects.equals(getEndDate(), worker.getEndDate()) && getStatus() == worker.getStatus();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getCoordinates(), getCreationDate(), getSalary(), getStartDate(), getEndDate(), getStatus(), getPerson());
+        return Objects.hash(getId(), getName(), getCoordinates(), getCreationDate(), getSalary(), getStartDate(), getEndDate(), getStatus());
     }
 
 
@@ -211,7 +251,6 @@ public class Worker implements Comparable<Worker> {
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
                 ", status=" + status +
-                ", person=" + person +
                 '}';
     }
 
