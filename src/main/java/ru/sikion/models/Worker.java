@@ -226,6 +226,9 @@ public class Worker implements Comparable<Worker> {
         this.creationDate = creationDate;
     }
 
+    public void setEyeColor(EyeColor eyeColor) {this.eyeColor = eyeColor;}
+    public void setHairColor(HairColor hairColor) {this.hairColor = hairColor;}
+
 
     @Override
     public boolean equals(Object o) {

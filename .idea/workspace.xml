@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="add worker.xml...">
+    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="fix bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveGreaterCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Utilities.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Utilities.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EyeColorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/EyeColorValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/HairColorValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -289,7 +294,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682595520827</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix bugs">
+      <created>1682602810791</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682602810791</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +328,8 @@
     <MESSAGE value="Catch the bugs :)" />
     <MESSAGE value="Another and another..." />
     <MESSAGE value="add worker.xml..." />
-    <option name="LAST_COMMIT_MESSAGE" value="add worker.xml..." />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
