@@ -19,7 +19,7 @@ public class Utilities {
             return null;
         }
 
-        int id = Integer.parseInt(null);
+        int id = 0;
         try {
             id = Integer.parseInt(input);
         } catch (NumberFormatException e) {
@@ -35,6 +35,6 @@ public class Utilities {
 
     public static boolean hasNextLineOrThrow(Scanner scanner) throws StreamInterruptedException {
         if (scanner.hasNextLine()) return true;
-        else throw new StreamInterruptedException("Поток ввода был преждевременно остановлен.");
+        else throw new StreamInterruptedException("The input stream was stopped prematurely.");
     }
 }

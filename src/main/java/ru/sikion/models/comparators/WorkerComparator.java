@@ -5,7 +5,7 @@ import ru.sikion.models.Worker;
 import java.util.Comparator;
 
 /**
- * Compare two Routes by ID (default used)
+ * Compare two workers by ID (default used)
  *
  * @author Sikion
  * @since 1.0

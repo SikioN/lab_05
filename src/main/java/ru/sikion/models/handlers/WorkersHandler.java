@@ -77,7 +77,7 @@ public class WorkersHandler implements CollectionHandler<HashSet<Worker>, Worker
     }
 
     /**
-     * Sorts elements by ID Field in Route.
+     * Sorts elements by ID Field in worker.
      */
     @Override
     public void sort() {
