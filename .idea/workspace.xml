@@ -4,26 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Add design for console application">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_rebase__Changes_.xml" afterDir="false" />
+    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Remove all bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/nonUserMode/WorkerNonCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/nonUserMode/WorkerNonCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/PersonCLIHAndler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/PersonCLIHAndler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,7 +211,7 @@
       <workItem from="1682685402105" duration="238000" />
       <workItem from="1682685667672" duration="10778000" />
       <workItem from="1682697692066" duration="1129000" />
-      <workItem from="1682699204894" duration="14254000" />
+      <workItem from="1682699204894" duration="15452000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1678043317673</created>
@@ -350,7 +332,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682707123738</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Remove all bugs">
+      <created>1682714726379</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1682714726379</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +370,8 @@
     <MESSAGE value="Rework of lab to conforms to the variant" />
     <MESSAGE value="Add commands" />
     <MESSAGE value="Add design for console application" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add design for console application" />
+    <MESSAGE value="Remove all bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remove all bugs" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
