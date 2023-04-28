@@ -26,7 +26,7 @@ public class CSVManager {
         Transformer transformer = TransformerFactory.newInstance()
                 .newTransformer(stylesource);
         Source source = new DOMSource(document);
-        Result outputTarget = new StreamResult(new File("/tmp/x.csv"));
+        Result outputTarget = new StreamResult(new File("/tmp/x.xml"));
         transformer.transform(source, outputTarget);
     }
 }

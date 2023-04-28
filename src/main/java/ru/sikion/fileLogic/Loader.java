@@ -109,14 +109,14 @@ public class Loader<T extends Collection<E>, E> {
                 fillCollection(parsedValues);
 
         } catch (AccessDeniedException ex) {
-            System.out.println("/ ! \\ File reading failed because application cannot access to this file.");
+            System.out.println("! File reading failed because application cannot access to this file.");
         } catch (CharacterCodingException ex) {
-            System.out.println("/ ! \\ File reading filed because system cannot understand file-coding.");
+            System.out.println("! File reading filed because system cannot understand file-coding.");
         } catch (IOException e) {
-            System.out.println("/ ! \\ Something went wrong during reading the file. Loading was skipped...");
+            System.out.println("! Something went wrong during reading the file. Loading was skipped...");
             myLogger.log(Level.SEVERE, "An unforeseen error occurred while working with input-output! " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("/ ! \\ File reading failed due to broken CSV file. Fix it manually & try again.");
+            System.out.println("! File reading failed due to broken CSV file. Fix it manually & try again.");
         }
         return resultCollection;
     }

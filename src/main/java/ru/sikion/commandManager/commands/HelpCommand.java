@@ -1,6 +1,7 @@
 package ru.sikion.commandManager.commands;
 
 import ru.sikion.commandManager.CommandManager;
+import ru.sikion.models.Utilites.CodeColor;
 
 import java.util.Optional;
 
@@ -27,14 +28,14 @@ public class HelpCommand implements BaseCommand {
 
         if (args.length == 1)
         {
-            manager.getCommands().forEach((name,command) -> System.out.println(name + " " + command.getArgs() + " --  " + command.getDescr()));
+            manager.getCommands().forEach((name, command) -> System.out.println(CodeColor.BLUE + name + " " + command.getArgs() + CodeColor.NONCOLOR + " - " + command.getDescr()));
         }
         else
         {
             for (int i = 1; i < args.length; i++)
             {
                 var command = manager.getCommands().get(args[i]);
-                System.out.println(args[i] + " -- " + Optional.ofNullable(command).map(BaseCommand::getDescr).orElse("This command is not found in manager"));
+                System.out.println(CodeColor.BLUE + args[i] + CodeColor.NONCOLOR + " — " + Optional.ofNullable(command).map(BaseCommand::getDescr).orElse("This command is not found in manager"));
             }
         }
     }

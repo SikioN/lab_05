@@ -1,5 +1,6 @@
 package ru.sikion.commandManager.commands;
 
+import ru.sikion.models.Utilites.CodeColor;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
 import ru.sikion.models.handlers.WorkersHandler;
@@ -29,6 +30,6 @@ public class ClearCommand implements BaseCommand {
 
         collectionHandler.clearCollection();
 
-        System.out.println("Cleared!");
+        System.out.println(CodeColor.GREEN + "Cleared!" + CodeColor.NONCOLOR);
     }
 }

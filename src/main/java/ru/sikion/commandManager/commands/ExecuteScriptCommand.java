@@ -47,7 +47,7 @@ public class ExecuteScriptCommand implements BaseCommand {
         try {
             CommandExecutor executor = new CommandExecutor();
             if (checkRecursion(Path.of(args[1]), new ArrayDeque<>())) {
-                myLogger.log(Level.WARNING, "При анализе скрипта обнаружена рекурсия. Устраните ее перед исполнением.");
+                myLogger.log(Level.WARNING, "Recursion was detected during script analysis. Remove it before execution.");
                 return;
             }
             myLogger.log(Level.INFO, "Executing script " + args[1]);

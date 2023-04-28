@@ -25,7 +25,7 @@ public class CSVReader implements BaseReader {
     private final ArrayList<String> currentKeys;
 
     /**
-     * Default constructor of XMLReader.
+     * Default constructor of CSVReader.
      */
     public CSVReader()
     {
@@ -35,7 +35,7 @@ public class CSVReader implements BaseReader {
     }
 
     /**
-     * Reads XML file by path and returns parsed <code>String[]</code>/<code>String</code> map.
+     * Reads CSV file by path and returns parsed <code>String[]</code>/<code>String</code> map.
      *
      * @param path path to CSV file
      * @return Map of read items
