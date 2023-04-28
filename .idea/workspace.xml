@@ -4,30 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="fix bugs">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveGreaterCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/RemoveLowerCommand.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/WorkerSalaryComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/PersonCLIHAndler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/PersonValidator.java" afterDir="false" />
+    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="Rework of lab to conforms to the variant">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/AddCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/InsertCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Loader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/CommandExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/commandManager/commands/ShowCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/Saver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/XMLWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/fileLogic/CSVWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Country.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Country.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/EyeColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/HairColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Identity/Status.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/Worker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/comparators/RouteDistanceComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/CoordinatesCLIHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/handlers/userMode/WorkerCLIHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordXValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/CoordXValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/models/validators/WorkerValidator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -230,7 +215,7 @@
       <workItem from="1682680824400" duration="313000" />
       <workItem from="1682681899942" duration="3040000" />
       <workItem from="1682685402105" duration="238000" />
-      <workItem from="1682685667672" duration="4881000" />
+      <workItem from="1682685667672" duration="8422000" />
     </task>
     <task id="LOCAL-00001" summary="Create project">
       <created>1678043317673</created>
@@ -330,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682607464092</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Rework of lab to conforms to the variant">
+      <created>1682690703573</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682690703573</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,7 +350,8 @@
     <MESSAGE value="Another and another..." />
     <MESSAGE value="add worker.xml..." />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="Rework of lab to conforms to the variant" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rework of lab to conforms to the variant" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

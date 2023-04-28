@@ -19,10 +19,10 @@ public class WorkerValidator implements Validator<Worker> {
         return idValidate.validate(Math.toIntExact(worker.getId())) &&
                 new NameValidator().validate(worker.getName()) &&
                 new SalaryValidator().validate(worker.getSalary()) &&
-                new StartDateValidator().validate(worker.getStartDate()) &&
-                new EndDateValidator().validate(worker.getEndDate()) &&
-                new StatusValidator().validate(worker.getStatus()) &&
-                new PersonValidator().validate(worker.getPersonality()) &&
+//                new StartDateValidator().validate(worker.getStartDate()) &&
+//                new EndDateValidator().validate(worker.getEndDate()) &&
+//                new StatusValidator().validate(worker.getStatus()) &&
+//                new PersonValidator().validate(worker.getPersonality()) &&
                 new CoordYValidator().validate(Optional.of(worker).map(Worker::getCoordinates).map(Coordinates::getY).orElse(0f)) &&
                 new CoordXValidator().validate(Optional.of(worker).map(Worker::getCoordinates).map(Coordinates::getX).orElse(0));
     }
