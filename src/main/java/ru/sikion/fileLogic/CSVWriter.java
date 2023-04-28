@@ -32,9 +32,9 @@ public class CSVWriter implements BaseWriter {
             writer.println("</workers>");
 
         } catch (FileNotFoundException e) {
-            File xml = new File(path);
+            File csv = new File(path);
             try {
-                boolean isCreated = xml.createNewFile();
+                boolean isCreated = csv.createNewFile();
                 if (isCreated) writeToFile(path, values);
                 else throw new IOException("Cannot create file.");
             } catch (IOException ex) {

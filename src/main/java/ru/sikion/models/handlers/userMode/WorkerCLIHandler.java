@@ -86,7 +86,6 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             } while (true);
             result.setSalary(ssalary);
 
-
 //            // eyeColor
 //            Validator<EyeColor> eyeColorValidator = new EyeColorValidator();
 //            String eyeColor = null;
@@ -150,21 +149,21 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             result.setCoordinates(coordinatesCLIHandler.buildObject());
 
             // from (may null)
-            System.out.println("Starting \"from\" field setup... (Type: Location)");
-            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
-            String answer = scanner.next();
-            if (Utilities.hasNextLineOrThrow(scanner)) {
-                scanner.nextLine();
-            }
-
-            // to (may null)
-            System.out.println("Starting \"to\" field setup... (Type: Location)");
-            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
-            answer = scanner.next();
-
-            if (Utilities.hasNextLineOrThrow(scanner)) {
-                scanner.nextLine();
-            }
+//            System.out.println("Starting \"from\" field setup... (Type: Location)");
+//            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
+//            String answer = scanner.next();
+//            if (Utilities.hasNextLineOrThrow(scanner)) {
+//                scanner.nextLine();
+//            }
+//
+//            // to (may null)
+//            System.out.println("Starting \"to\" field setup... (Type: Location)");
+//            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
+//            answer = scanner.next();
+//
+//            if (Utilities.hasNextLineOrThrow(scanner)) {
+//                scanner.nextLine();
+//            }
 
 
 

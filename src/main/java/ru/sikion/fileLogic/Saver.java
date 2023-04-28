@@ -32,11 +32,11 @@ public class Saver<T extends Collection<E>, E> {
      */
     public void saveCollection(T collection, String envKey)
     {
-        String xmlPath = System.getenv(envKey);
+        String csvPath = System.getenv(envKey);
 
         BaseWriter writer = new CSVWriter();
 
-        writer.writeToFile(xmlPath, getValues(collection));
+        writer.writeToFile(csvPath, getValues(collection));
     }
 
     LinkedHashMap<String[], String> result;
