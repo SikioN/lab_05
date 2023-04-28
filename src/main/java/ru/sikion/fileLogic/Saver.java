@@ -1,5 +1,7 @@
 package ru.sikion.fileLogic;
 
+import ru.sikion.fileLogic.XMLWriter;
+
 import java.beans.PropertyEditor;
 import java.beans.PropertyEditorManager;
 import java.lang.reflect.Field;
@@ -34,7 +36,7 @@ public class Saver<T extends Collection<E>, E> {
     {
         String csvPath = System.getenv(envKey);
 
-        BaseWriter writer = new CSVWriter();
+        BaseWriter writer = new XMLWriter();
 
         writer.writeToFile(csvPath, getValues(collection));
     }
@@ -86,6 +88,7 @@ public class Saver<T extends Collection<E>, E> {
         {
             Field[] fields = field.getType().getDeclaredFields();
             currentAddress.add(field.getName());
+
             for (Field fieldType : fields)
             {
                 addToCollection(objValue, fieldType, currentAddress);

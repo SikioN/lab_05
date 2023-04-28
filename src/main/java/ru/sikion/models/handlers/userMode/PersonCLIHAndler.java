@@ -42,7 +42,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
             // eyeColor
             Validator<EyeColor> eyeColorValidator = new EyeColorValidator();
             String eyeColor = null;
-            EyeColor eyeColor1;
+            String eyeColor1;
             do {
                 System.out.print("Enter the value of eye color (Type: EyeColor): ");
                 if (Utilities.hasNextLineOrThrow(scanner)) {
@@ -60,7 +60,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
                     System.out.println("Restrictions: Should be EyeColor and non nune.\n");
                 }
                 try {
-                    if (eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {eyeColor1 = EyeColor.fromString(eyeColor); break;}
+                    if (eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {eyeColor1 = EyeColor.fromString(eyeColor).toString(); break;}
                 } catch (Exception e) {
                     continue;
                 }
@@ -71,7 +71,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
             // hairColor
             Validator<HairColor> hairColorValidator = new HairColorValidator();
             String hairColor = null;
-            HairColor hairColor1;
+            String hairColor1;
             do {
                 System.out.print("Enter the value of hair color (Type: HairColor): ");
                 if (Utilities.hasNextLineOrThrow(scanner)) {
@@ -90,7 +90,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
                 }
                 try {
                     if (hairColorValidator.validate(HairColor.fromString(hairColor))) {
-                        hairColor1 = HairColor.fromString(hairColor);
+                        hairColor1 = HairColor.fromString(hairColor).toString();
                         break;
                     }
                 } catch (Exception e) {
@@ -103,7 +103,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
             // nationality
             Validator<Country> nationalityValidator = new NationalityValidator();
             String nationality = null;
-            Country nationality1;
+            String nationality1;
             do {
                 System.out.print("Enter the name of the country in which the worker was born (Type: Country): ");
                 if (Utilities.hasNextLineOrThrow(scanner)) {
@@ -122,7 +122,7 @@ public class PersonCLIHAndler implements ModuleHandler<Person> {
                 }
                 try {
                     if (nationalityValidator.validate(Country.fromString(nationality))) {
-                        nationality1 = Country.fromString(nationality);
+                        nationality1 = Country.fromString(nationality).toString();
                         break;
                     }
                 } catch (Exception e) {

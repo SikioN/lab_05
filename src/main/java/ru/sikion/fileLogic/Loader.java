@@ -1,5 +1,6 @@
 package ru.sikion.fileLogic;
 
+import ru.sikion.fileLogic.XMLReader;
 import ru.sikion.fileLogic.editors.DateEditor;
 
 import java.beans.PropertyEditor;
@@ -27,7 +28,7 @@ import java.util.regex.Pattern;
 
 public class Loader<T extends Collection<E>, E> {
 
-    private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
+//    private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
 
     private T resultCollection;
 
@@ -49,7 +50,7 @@ public class Loader<T extends Collection<E>, E> {
         }
         catch (Exception e)
         {
-            myLogger.log(Level.SEVERE, "There was a problem with the program: " + e);
+//            myLogger.log(Level.SEVERE, "There was a problem with the program: " + e);
         }
     }
 
@@ -81,13 +82,13 @@ public class Loader<T extends Collection<E>, E> {
     public T loadFromCSVbyEnvKey(String envKey) {
         String csvPath = System.getenv(envKey);
         if (csvPath == null) {
-            myLogger.log(Level.SEVERE, "No environment variable with path to boot file!");
-            myLogger.log(Level.INFO, "Specify an environment variable named \"lab5\", by placing the full path to the XML file there.");
-            myLogger.log(Level.WARNING, "The programme cannot continue.");
+//            myLogger.log(Level.SEVERE, "No environment variable with path to boot file!");
+//            myLogger.log(Level.INFO, "Specify an environment variable named \"lab5\", by placing the full path to the XML file there.");
+//            myLogger.log(Level.WARNING, "The programme cannot continue.");
             System.exit(-1);
         }
 
-        BaseReader reader = new CSVReader();
+        BaseReader reader = new XMLReader();
 
         resultCollection = loadFromFile(csvPath, reader);
 
@@ -114,9 +115,9 @@ public class Loader<T extends Collection<E>, E> {
             System.out.println("! File reading filed because system cannot understand file-coding.");
         } catch (IOException e) {
             System.out.println("! Something went wrong during reading the file. Loading was skipped...");
-            myLogger.log(Level.SEVERE, "An unforeseen error occurred while working with input-output! " + e.getMessage());
+//            myLogger.log(Level.SEVERE, "An unforeseen error occurred while working with input-output! " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("! File reading failed due to broken CSV file. Fix it manually & try again.");
+            System.out.println("! File reading failed due to broken XML file. Fix it manually & try again.");
         }
         return resultCollection;
     }
@@ -124,7 +125,7 @@ public class Loader<T extends Collection<E>, E> {
     private void fillCollection(LinkedHashMap<String[], String> parsedValues) {
         parsedValues.forEach(this::addFieldToElement);
 
-        myLogger.log(Level.FINE, "adding last...");
+//        myLogger.log(Level.FINE, "adding last...");
         addObjectToCollection(buildingObject); // add last
     }
 
@@ -140,7 +141,7 @@ public class Loader<T extends Collection<E>, E> {
             currentIndex = Integer.parseInt(matcher.group());
         }
         else {
-            myLogger.log (Level.WARNING, "The field has an incorrect address and will be skipped. " + Arrays.toString(pathToField));
+//            myLogger.log (Level.WARNING, "The field has an incorrect address and will be skipped. " + Arrays.toString(pathToField));
             return;
         }
         if (latestKnownIndex != currentIndex)
@@ -158,7 +159,7 @@ public class Loader<T extends Collection<E>, E> {
             else
             {
                 // build new
-                myLogger.log(Level.FINE, "adding object...");
+//                myLogger.log(Level.FINE, "adding object...");
                 addObjectToCollection(buildingObject);
                 buildingObject = buildElement();
             }
@@ -172,7 +173,7 @@ public class Loader<T extends Collection<E>, E> {
                 setField(fullClassOfElement, pathToField, 2, s, buildingObject);
 
             } catch (NoSuchFieldException | InstantiationException | IllegalAccessException e) {
-                myLogger.log(Level.SEVERE, "The field was not found: " + e);
+//                myLogger.log(Level.SEVERE, "The field was not found: " + e);
             }
         }
     }
@@ -203,8 +204,8 @@ public class Loader<T extends Collection<E>, E> {
             }
             catch (NullPointerException | NumberFormatException | DateTimeParseException e)
             {
-                myLogger.log(Level.WARNING, "XML file is corrupted. Data string " + value + " (Address: " + Arrays.toString(fullPath) + ") was skipped.");
-                myLogger.log(Level.INFO, "If you think that an error occurred, add a handler to the register. Take a look at Loader.setupConverter in Javadoc.");
+//                myLogger.log(Level.WARNING, "XML file is corrupted. Data string " + value + " (Address: " + Arrays.toString(fullPath) + ") was skipped.");
+//                myLogger.log(Level.INFO, "If you think that an error occurred, add a handler to the register. Take a look at Loader.setupConverter in Javadoc.");
             }
         }
     }
@@ -222,9 +223,9 @@ public class Loader<T extends Collection<E>, E> {
         {
             result = fullClassOfElement.newInstance();
         } catch (InstantiationException e) {
-            myLogger.log(Level.SEVERE, "The element was initialized with a problem! " + e.getMessage());
+//            myLogger.log(Level.SEVERE, "The element was initialized with a problem! " + e.getMessage());
         } catch (IllegalAccessException e) {
-            myLogger.log(Level.SEVERE, "Access error! " + e.getMessage());
+//            myLogger.log(Level.SEVERE, "Access error! " + e.getMessage());
         }
         return result;
     }

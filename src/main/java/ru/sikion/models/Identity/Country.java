@@ -217,4 +217,11 @@ public enum Country {
         throw new IllegalArgumentException("No such value");
     }
 
+    public String getValue() {
+        return value;
+    }
+
+    public String getName() {
+        return value;
+    }
 }

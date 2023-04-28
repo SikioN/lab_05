@@ -1,5 +1,7 @@
 package ru.sikion.fileLogic;
 
+import ru.sikion.fileLogic.BaseReader;
+
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.*;
@@ -8,16 +10,16 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 /**
- * CSV Reader class for <code>Loader</code> class. It reads XML file by given path and provides
+ * XML Reader class for <code>Loader</code> class. It reads XML file by given path and provides
  * <code>LinkedHashMap&#8249;String[], String></code>, where <code>String[]</code> is XML path to <code>String</code> value.
  *
  * @see LinkedHashMap
  * @since 1.0
  * @author Sikion
  */
-public class CSVReader implements BaseReader {
+public class XMLReader implements BaseReader {
 
-    private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
+//    private static final Logger myLogger = Logger.getLogger("com.github.sikion.lab5");
     private final LinkedHashMap<String[], String> resultParsing;
 
     private final ArrayDeque<String> values;
@@ -25,9 +27,9 @@ public class CSVReader implements BaseReader {
     private final ArrayList<String> currentKeys;
 
     /**
-     * Default constructor of CSVReader.
+     * Default constructor of XMLReader.
      */
-    public CSVReader()
+    public XMLReader()
     {
         resultParsing = new LinkedHashMap<>();
         values = new ArrayDeque<>();
@@ -35,9 +37,9 @@ public class CSVReader implements BaseReader {
     }
 
     /**
-     * Reads CSV file by path and returns parsed <code>String[]</code>/<code>String</code> map.
+     * Reads XML file by path and returns parsed <code>String[]</code>/<code>String</code> map.
      *
-     * @param path path to CSV file
+     * @param path path to XML file
      * @return Map of read items
      * @throws IOException If an I/O occurs opening source
      */
@@ -46,11 +48,11 @@ public class CSVReader implements BaseReader {
 
         if (!scanner.hasNextLine())
         {
-            System.out.println("CSV file violates CSV format and was skipped.");
+            System.out.println("XML file violates XML format and was skipped.");
             return resultParsing;
         }
 
-        scanner.nextLine();
+        scanner.nextLine(); // skip 1st line
 
         while (scanner.hasNext())
         {
@@ -92,7 +94,7 @@ public class CSVReader implements BaseReader {
                 keys[i++] = key;
             }
 
-            myLogger.log(Level.FINE, Arrays.toString(keys) + " " + values.getLast());
+//            myLogger.log(Level.FINE, Arrays.toString(keys) + " " + values.getLast());
 
             resultParsing.put(keys, values.getLast());
             values.removeLast();

@@ -21,8 +21,6 @@ import java.util.logging.Logger;
  */
 public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
 
-    private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
-
     Scanner scanner;
 
     /**
@@ -40,8 +38,9 @@ public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
         Worker result = new Worker();
         int valuesToRead = 12;
         int coordsIndex = 1;
+        int personIndex = 11;
         int fromIndex = 0;
-        int toIndex = 7;
+        int toIndex = 9;
         ArrayList<String> values = new ArrayList<>(valuesToRead);
 
         for (int i = 0; i < valuesToRead && scanner.hasNextLine(); i++)
@@ -54,6 +53,12 @@ public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
                 values.add(null);
 
                 if (i == coordsIndex)
+                {
+                    valuesToRead -= 1;
+                    fromIndex -= 1;
+                    toIndex -= 1;
+                }
+                if (i == personIndex)
                 {
                     valuesToRead -= 1;
                     fromIndex -= 1;
@@ -102,7 +107,6 @@ public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
 
         } catch (NumberFormatException | NullPointerException e)
         {
-            myLogger.log(Level.WARNING, "The object will be skipped. Correct the script error and try again.");
             throw new BuildObjectException("The data provided to construct the object is incorrect. Use manual input or correct the command in the script.");
         }
     }

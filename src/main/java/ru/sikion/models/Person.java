@@ -16,16 +16,16 @@ import java.util.Objects;
  */
 
 public class Person {
-    private EyeColor eyeColor;
-    private HairColor hairColor;
-    private Country nationality;
+    private String eyeColor;
+    private String hairColor;
+    private String nationality;
 
     /**
      * Restrictions: Field cannot be null.
      *
      * @return eyeColor of the person
      */
-    public EyeColor getEyeColor() {
+    public String getEyeColor() {
         return eyeColor;
     }
 
@@ -34,7 +34,7 @@ public class Person {
      *
      * @return hairColor of the person
      */
-    public HairColor getHairColor() {
+    public String getHairColor() {
         return hairColor;
     }
 
@@ -43,7 +43,7 @@ public class Person {
      *
      * @return nationality of the person
      */
-    public Country getNationality() {
+    public String getNationality() {
         return nationality;
     }
 
@@ -53,7 +53,7 @@ public class Person {
      *
      * @param eyeColor of the person
      */
-    public void setEyeColor(EyeColor eyeColor) {
+    public void setEyeColor(String eyeColor) {
         this.eyeColor = eyeColor;
     }
 
@@ -62,7 +62,7 @@ public class Person {
      *
      * @param hairColor of the person
      */
-    public void setHairColor(HairColor hairColor) {
+    public void setHairColor(String hairColor) {
         this.hairColor = hairColor;
     }
 
@@ -71,7 +71,7 @@ public class Person {
      *
      * @param nationality
      */
-    public void setNationality(Country nationality) {
+    public void setNationality(String nationality) {
         this.nationality = nationality;
     }
 

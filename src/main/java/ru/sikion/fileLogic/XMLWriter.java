@@ -1,9 +1,12 @@
 package ru.sikion.fileLogic;
 
+import ru.sikion.fileLogic.BaseWriter;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.nio.file.NoSuchFileException;
 import java.util.*;
 import java.util.logging.Logger;
 
@@ -15,9 +18,7 @@ import java.util.logging.Logger;
  * @since 1.0
  * @author Sikion
  */
-public class CSVWriter implements BaseWriter {
-
-    private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
+public class XMLWriter implements BaseWriter {
 
     @Override
     public void writeToFile(String path, LinkedHashMap<String[], String> values) {
@@ -27,14 +28,14 @@ public class CSVWriter implements BaseWriter {
 
             writer.println("<?xml version=\"1.0\"?>");
             writer.println();
-            writer.println("<workers>");
+            writer.println("<routes>");
             values.forEach((address, value) -> writeElement(writer, address, getNextAddress(values, address), value));
-            writer.println("</workers>");
+            writer.println("</routes>");
 
         } catch (FileNotFoundException e) {
-            File csv = new File(path);
+            File xml = new File(path);
             try {
-                boolean isCreated = csv.createNewFile();
+                boolean isCreated = xml.createNewFile();
                 if (isCreated) writeToFile(path, values);
                 else throw new IOException("Cannot create file.");
             } catch (IOException ex) {
@@ -44,7 +45,7 @@ public class CSVWriter implements BaseWriter {
                 System.out.println("Try to create this file manually: " + path);
                 System.out.println("Check access to file if it exists.");
                 System.out.println("Or change environment variable.");
-                System.out.println("Please, don't modify/remove this CSV file. It goes to unknown consequences.");
+                System.out.println("Please, don't modify/remove this xml file. It goes to unknown consequences.");
             }
         }
     }
@@ -60,7 +61,6 @@ public class CSVWriter implements BaseWriter {
             {
                 writer.print("\t");
             }
-            myLogger.fine("Opening: " + address[i] + "Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address));
             writer.println("<" + address[i] + ">");
         }
         for (int j = 0; j < address.length + 1; j++)
@@ -69,13 +69,11 @@ public class CSVWriter implements BaseWriter {
         }
         writer.println(value);
         for (lastKnownI = address.length; lastKnownI > 0; lastKnownI--) {
-            myLogger.fine("Addresses // next: " + Arrays.toString(nextAddress) + ", current: " + Arrays.toString(address) + " / lastI: " + lastKnownI);
             if (nextAddress.length < lastKnownI || !Objects.equals(nextAddress[lastKnownI - 1], address[lastKnownI - 1])) {
                 for (int j = 0; j < lastKnownI; j++) {
                     writer.print("\t");
                 }
                 writer.println("</" + address[lastKnownI - 1] + ">");
-                myLogger.fine("Closing: " + address[lastKnownI - 1]);
             }
             else break;
         }
