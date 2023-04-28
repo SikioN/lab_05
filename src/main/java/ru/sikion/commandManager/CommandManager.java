@@ -38,14 +38,17 @@ public class CommandManager {
         commands.put("help", new HelpCommand());
         commands.put("info", new InfoCommand());
         commands.put("show", new ShowCommand());
-        commands.put("add", new AddCommand());
+        commands.put("add", new InsertCommand());
         commands.put("update", new UpdateCommand());
         commands.put("remove_by_id", new RemoveByIdCommand());
         commands.put("clear", new ClearCommand());
         commands.put("save", new SaveCommand());
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
+        commands.put("remove_greater", new RemoveGreaterCommand());
+        commands.put("remove_lower", new RemoveLowerCommand());
         commands.put("min_by_creation_date", new MinByCreationDateCommand());
+
     }
 
     /**
@@ -67,6 +70,8 @@ public class CommandManager {
         commands.put("save", new SaveCommand());
         commands.put("execute_script", new ExecuteScriptCommand());
         commands.put("exit", new ExitCommand());
+        commands.put("remove_greater", new RemoveGreaterCommand());
+        commands.put("remove_lower", new RemoveLowerCommand());
         commands.put("min_by_creation_date", new MinByCreationDateCommand());
 
         ModuleHandler<Worker> handler = null;
@@ -76,7 +81,7 @@ public class CommandManager {
             case NonUserMode -> handler = new WorkerNonCLIHandler(scanner);
         }
 
-        commands.put("add", new AddCommand(handler));
+        commands.put("add", new InsertCommand(handler));
         commands.put("update", new UpdateCommand(handler));
     }
 

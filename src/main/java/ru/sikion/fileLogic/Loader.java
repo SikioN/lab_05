@@ -78,18 +78,18 @@ public class Loader<T extends Collection<E>, E> {
      * @param envKey Key of System env. var to XML filepath
      * @return Filled collection of type T
      */
-    public T loadFromXMLbyEnvKey(String envKey) {
-        String xmlPath = System.getenv(envKey);
-        if (xmlPath == null) {
+    public T loadFromCSVbyEnvKey(String envKey) {
+        String csvPath = System.getenv(envKey);
+        if (csvPath == null) {
             myLogger.log(Level.SEVERE, "No environment variable with path to boot file!");
             myLogger.log(Level.INFO, "Specify an environment variable named \"lab5\", by placing the full path to the XML file there.");
             myLogger.log(Level.WARNING, "The programme cannot continue.");
             System.exit(-1);
         }
 
-        BaseReader reader = new XMLReader();
+        BaseReader reader = new CSVReader();
 
-        resultCollection = loadFromFile(xmlPath, reader);
+        resultCollection = loadFromFile(csvPath, reader);
 
         return resultCollection;
     }
@@ -116,7 +116,7 @@ public class Loader<T extends Collection<E>, E> {
             System.out.println("/ ! \\ Something went wrong during reading the file. Loading was skipped...");
             myLogger.log(Level.SEVERE, "An unforeseen error occurred while working with input-output! " + e.getMessage());
         } catch (Exception e) {
-            System.out.println("/ ! \\ File reading failed due to broken XML file. Fix it manually & try again.");
+            System.out.println("/ ! \\ File reading failed due to broken CSV file. Fix it manually & try again.");
         }
         return resultCollection;
     }

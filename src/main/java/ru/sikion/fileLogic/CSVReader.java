@@ -8,14 +8,14 @@ import java.util.logging.Logger;
 import java.util.regex.Pattern;
 
 /**
- * XML Reader class for <code>Loader</code> class. It reads XML file by given path and provides
+ * CSV Reader class for <code>Loader</code> class. It reads XML file by given path and provides
  * <code>LinkedHashMap&#8249;String[], String></code>, where <code>String[]</code> is XML path to <code>String</code> value.
  *
  * @see LinkedHashMap
  * @since 1.0
  * @author Sikion
  */
-public class XMLReader implements BaseReader {
+public class CSVReader implements BaseReader {
 
     private static final Logger myLogger = Logger.getLogger("com.github.Sikion.lab5");
     private final LinkedHashMap<String[], String> resultParsing;
@@ -27,7 +27,7 @@ public class XMLReader implements BaseReader {
     /**
      * Default constructor of XMLReader.
      */
-    public XMLReader()
+    public CSVReader()
     {
         resultParsing = new LinkedHashMap<>();
         values = new ArrayDeque<>();
@@ -37,7 +37,7 @@ public class XMLReader implements BaseReader {
     /**
      * Reads XML file by path and returns parsed <code>String[]</code>/<code>String</code> map.
      *
-     * @param path path to XML file
+     * @param path path to CSV file
      * @return Map of read items
      * @throws IOException If an I/O occurs opening source
      */
@@ -46,7 +46,7 @@ public class XMLReader implements BaseReader {
 
         if (!scanner.hasNextLine())
         {
-            System.out.println("XML file violates XML format and was skipped.");
+            System.out.println("CSV file violates CSV format and was skipped.");
             return resultParsing;
         }
 

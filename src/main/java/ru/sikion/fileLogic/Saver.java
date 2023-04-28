@@ -34,7 +34,7 @@ public class Saver<T extends Collection<E>, E> {
     {
         String xmlPath = System.getenv(envKey);
 
-        BaseWriter writer = new XMLWriter();
+        BaseWriter writer = new CSVWriter();
 
         writer.writeToFile(xmlPath, getValues(collection));
     }

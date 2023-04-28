@@ -12,7 +12,7 @@ public enum HairColor {
     DYED("dyed"),
     BALD("bald");
 
-    private String value;
+    private final String value;
 
     private HairColor(String value) {
         this.value = value;
@@ -28,13 +28,4 @@ public enum HairColor {
         }
         throw new IllegalArgumentException("No such value");
     }
-//    BLACK,
-//    BLOND,
-//    BROWN,
-//    FAIR,
-//    GINGER,
-//    GREY,
-//    RED,
-//    DYED,
-//    BALD;
 }

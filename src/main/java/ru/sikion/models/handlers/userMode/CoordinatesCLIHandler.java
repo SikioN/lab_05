@@ -53,7 +53,7 @@ public class CoordinatesCLIHandler implements ModuleHandler<Coordinates> {
                     }
                 } catch (InputMismatchException | NumberFormatException e) {
                     System.out.println("Wrong input! Try again.");
-                    System.out.println("You should enter a positive real number, matches with IEEE 754 Double value standard (not so big/small).");
+                    System.out.println("You should enter a positive real number.");
                     continue;
                 }
                 break;
