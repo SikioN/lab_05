@@ -20,10 +20,10 @@ public class CommandExecutor {
      * @param mode  variant of command behavior (see CommandMode enum)
      */
     public void startExecuting(InputStream input, CommandMode mode) {
-        Scanner cmdScanner = new Scanner(input);
-        CommandManager commandManager = new CommandManager(mode, cmdScanner);
-        while (cmdScanner.hasNext()) {
-            String line = cmdScanner.nextLine();
+        Scanner scanner = new Scanner(input);
+        CommandManager commandManager = new CommandManager(mode, scanner);
+        while (scanner.hasNext()) {
+            String line = scanner.nextLine();
             if (line.isEmpty()) continue;
             try {
                 commandManager.executeCommand(line.split(" "));
