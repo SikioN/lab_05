@@ -33,7 +33,7 @@ public class IdValidator implements Validator<Integer> {
      * Checks if value unique in collection, greater than 0 and notnull.
      *
      * @param value ID to validate
-     * @return true/false -- matches the restrictions
+     * @return true/false - matches the restrictions
      * @see Worker
      */
 

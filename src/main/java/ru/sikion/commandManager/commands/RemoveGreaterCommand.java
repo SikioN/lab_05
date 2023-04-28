@@ -60,17 +60,16 @@ public class RemoveGreaterCommand implements BaseCommand{
         while (iterator.hasNext())
         {
             var current = iterator.next();
-            System.out.print("Comparing: current -- " + current.getSalary() + " vs " + greaterThan.getSalary());
+            System.out.print("Comparing: current - " + current.getSalary() + " vs " + greaterThan.getSalary());
             if (comparator.compare(current, greaterThan) > 0)
             {
-                System.out.println(" -- Greater / Removing...");
                 System.out.println("Removing element: " + current);
                 iterator.remove();
                 count++;
             }
             else
             {
-                System.out.println(" -- Lower.");
+                System.out.println(" - Lower.");
             }
         }
 

@@ -1,5 +1,7 @@
 package ru.sikion.commandManager.commands;
 
+import ru.sikion.models.Utilites.CodeColor;
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -24,7 +26,7 @@ public class ExitCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) {
-        myLogger.log(Level.FINE, "Выходим из программы...");
+        myLogger.log(Level.FINE, CodeColor.RUBIN + "Exit the program" + CodeColor.NONCOLOR);
         System.exit(0);
     }
 }

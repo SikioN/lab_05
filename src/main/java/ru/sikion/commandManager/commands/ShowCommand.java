@@ -29,11 +29,6 @@ public class ShowCommand implements BaseCommand {
 
         handler.getCollection().forEach(System.out::println);
 
-//        for (handler.getCollection():
-//             c) {
-//
-//        }
-
         if (handler.getCollection().isEmpty())
         {
             System.out.println("There's nothing to show.");

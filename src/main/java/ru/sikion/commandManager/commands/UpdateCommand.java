@@ -48,7 +48,7 @@ public class UpdateCommand implements BaseCommand {
 
     @Override
     public String getDescr() {
-        return "Updates element by it's ID.";
+        return "Updates element by ID.";
     }
 
     @Override

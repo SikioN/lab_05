@@ -31,7 +31,7 @@ public class MinByCreationDateCommand implements BaseCommand{
 
         if (min == null)
         {
-            System.out.println("There's nothing to show...");
+            System.out.println("There's nothing to show. Collection is empty.");
         }
         else
         {

@@ -1,9 +1,7 @@
 package ru.sikion.models;
 
-import ru.sikion.models.Identity.Country;
-import ru.sikion.models.Identity.EyeColor;
-import ru.sikion.models.Identity.HairColor;
 import ru.sikion.models.Identity.Status;
+import ru.sikion.models.Utilites.CodeColor;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -206,16 +204,16 @@ public class Worker implements Comparable<Worker> {
 
     @Override
     public String toString() {
-        return "Worker №" + id +
-                "\n  name = " + name +
-                "\n  coordinates = " + coordinates +
-                "\n  creationDate = " + creationDate +
-                "\n  salary = " + salary +
-                "\n  startDate = " + startDate +
-                "\n  endDate = " + endDate +
-                "\n  status = " + status +
-                "\n  personality = " + person +
-                '\n';
+        return CodeColor.BLUE + "Worker №" + id + CodeColor.NONCOLOR +
+                "\n" + CodeColor.VIOLET + "  name" + CodeColor.NONCOLOR + " = " + name +
+                "\n" + CodeColor.VIOLET + "  coordinates" + CodeColor.NONCOLOR + " = " + coordinates +
+                "\n" + CodeColor.VIOLET + "  creationDate" + CodeColor.NONCOLOR + " = " + creationDate +
+                "\n" + CodeColor.VIOLET + "  salary" + CodeColor.NONCOLOR + " = " + salary +
+                "\n" + CodeColor.VIOLET + "  startDate" + CodeColor.NONCOLOR + " = " + startDate +
+                "\n" + CodeColor.VIOLET + "  endDate" + CodeColor.NONCOLOR + " = " + endDate +
+                "\n" + CodeColor.VIOLET + "  status" + CodeColor.NONCOLOR + " = " + status +
+                "\n" + CodeColor.VIOLET + "  personality" + CodeColor.NONCOLOR + " = " + person +
+                "\n";
     }
 
     @Override
