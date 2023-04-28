@@ -3,16 +3,19 @@ package ru.sikion.models.handlers.userMode;
 import ru.sikion.exceptions.BuildObjectException;
 import ru.sikion.exceptions.StreamInterruptedException;
 import ru.sikion.main.Utilities;
-import ru.sikion.models.Identity.EyeColor;
-import ru.sikion.models.Identity.HairColor;
+import ru.sikion.models.Identity.Status;
+import ru.sikion.models.Utilites.CodeColor;
 import ru.sikion.models.Worker;
-import ru.sikion.models.handlers.*;
-import ru.sikion.models.validators.*;
+import ru.sikion.models.handlers.ModuleHandler;
+import ru.sikion.models.handlers.WorkerHandlers;
+import ru.sikion.models.validators.NameValidator;
+import ru.sikion.models.validators.SalaryValidator;
+import ru.sikion.models.validators.StatusValidator;
+import ru.sikion.models.validators.Validator;
 
 import java.time.Instant;
 import java.util.Date;
-import java.util.InputMismatchException;
-import java.util.Locale;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -42,41 +45,44 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             result.setId(WorkerHandlers.generateID());
 
             // name
+            System.out.println();
             Validator<String> nameValidator = new NameValidator();
             String name = null;
             do {
-                System.out.println("Enter the value of name (Type: String)");
+                System.out.print("Enter the value of name (Type: String): ");
                 if (Utilities.hasNextLineOrThrow(scanner)) {
-                    String line = scanner.nextLine();
+                    String line = scanner.nextLine().trim();
                     if (!line.isEmpty())
                         name = line;
                 }
                 if (!nameValidator.validate(name)) {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    System.out.println("Restrictions: Should be not null and not empty.");
+                    System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
+                    System.out.println("Restrictions: Should be not null and not empty.\n");
                 }
             } while (!nameValidator.validate(name));
+            name = name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
             result.setName(name);
 
+            System.out.println();
             // salary
             Validator<Double> salaryValidator = new SalaryValidator();
-            String salary = null;
-            Double ssalary = 0.0;
+            String salary = "";
+            double ssalary = 0.0;
             do {
-                System.out.println("Enter the value of salary (Type: Double)");
+                System.out.print("Enter the value of salary (Type: Double): ");
                 if (Utilities.hasNextLineOrThrow(scanner)) {
-                    String line = scanner.nextLine();
+                    String line = scanner.nextLine().trim();
                     if (!line.isEmpty())
                         salary = line;
                 }
                 try {
                     if (!salaryValidator.validate(Double.parseDouble(salary))) {
-                        System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Should be Double and greater than 0.");
+                        System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
+                        System.out.println("Restrictions: Should be Double and greater than 0.\n");
                     }
                 } catch (NumberFormatException e) {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    System.out.println("Restrictions: Should be Double and greater than 0.");
+                    System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
+                    System.out.println("Restrictions: Should be Double and greater than 0.\n");
                 }
                 try {
                     if (salaryValidator.validate(Double.parseDouble(salary))) {ssalary = Double.parseDouble(salary); break;}
@@ -86,67 +92,95 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             } while (true);
             result.setSalary(ssalary);
 
-//            // eyeColor
-//            Validator<EyeColor> eyeColorValidator = new EyeColorValidator();
-//            String eyeColor = null;
-//            EyeColor eyeColor1;
-//            do {
-//                System.out.println("Enter the value of eye color (Type: EyeColor)");
-//                if (Utilities.hasNextLineOrThrow(scanner)) {
-//                    String line = scanner.nextLine().toLowerCase();
-//                    if (!line.isEmpty())
-//                        eyeColor = line;
-//                }
-//                try {
-//                    if (!eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {
-//                        System.out.println("Value violates restrictions for field! Try again.");
-//                        System.out.println("Restrictions: Should be EyeColor and non nune.");
-//                    }
-//                } catch (Exception e) {
-//                    System.out.println("Value violates restrictions for field! Try again.");
-//                    System.out.println("Restrictions: Should be EyeColor and non nune.");
-//                }
-//                try {
-//                    if (eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {eyeColor1 = EyeColor.fromString(eyeColor); break;}
-//                } catch (Exception e) {
-//                    continue;
-//                }
-//            } while (true);
-//            result.setEyeColor(eyeColor1);
-
-
-//            // hairColor
-//            Validator<HairColor> hairColorValidator = new HairColorValidator();
-//            String hairColor = null;
-//            HairColor hairColor1;
-//            do {
-//                System.out.println("Enter the value of hair color (Type: HairColor)");
-//                if (Utilities.hasNextLineOrThrow(scanner)) {
-//                    String line = scanner.nextLine().toLowerCase();
-//                    if (!line.isEmpty())
-//                        hairColor = line;
-//                }
-//                try {
-//                    if (!hairColorValidator.validate(HairColor.fromString(hairColor))) {
-//                        System.out.println("Value violates restrictions for field! Try again.");
-//                        System.out.println("Restrictions: Should be HairColor and non nune.");
-//                    }
-//                } catch (Exception e) {
-//                    System.out.println("Value violates restrictions for field! Try again.");
-//                    System.out.println("Restrictions: Should be EyeColor and non nune.");
-//                }
-//                try {
-//                    if (hairColorValidator.validate(HairColor.fromString(hairColor))) {hairColor1 = HairColor.fromString(hairColor); break;}
-//                } catch (Exception e) {
-//                    continue;
-//                }
-//            } while (true);
-//            result.setHairColor(hairColor1);
-
-            // coords
+            System.out.println();
+            // coordinates
             System.out.println("Starting coordinates field setup... (Type: Coordinates)");
             CoordinatesCLIHandler coordinatesCLIHandler = new CoordinatesCLIHandler();
             result.setCoordinates(coordinatesCLIHandler.buildObject());
+
+            System.out.println();
+            // personality
+            System.out.println("Starting personality field setup... (Type: Personality)");
+
+            while (true) {
+
+                System.out.print("This step may be skipped to fill. Do you want to fill it now? [" + CodeColor.GREEN + "y" + CodeColor.NONCOLOR + "/" + CodeColor.RED + "n" + CodeColor.NONCOLOR + "] ");
+                String answer = scanner.next();
+                System.out.println();
+
+                if (Objects.equals(answer, "y") || Objects.equals(answer, "yes") || Objects.equals(answer, "1")) {
+                    PersonCLIHAndler personCLIHAndler = new PersonCLIHAndler();
+                    result.setPersonality(personCLIHAndler.buildObject());
+                    break;
+                } else if (Objects.equals(answer, "n") || Objects.equals(answer, "no") || Objects.equals(answer, "2")) {
+                    System.out.println("Skipped. You can fill it later.");
+                    break;
+                }
+                System.out.println(CodeColor.RED + "\nInvalid answer! Try again.\n" + CodeColor.NONCOLOR);
+            }
+
+            System.out.println();
+            // status
+            System.out.println("Starting status field setup... (Type: Status)");
+
+            while (true) {
+
+                System.out.print("This step may be skipped to fill. Do you want to fill it now? [" + CodeColor.GREEN + "y" + CodeColor.NONCOLOR + "/" + CodeColor.RED + "n" + CodeColor.NONCOLOR + "] ");
+                String answer = scanner.next();
+                System.out.println();
+
+                if (Objects.equals(answer, "y") || Objects.equals(answer, "yes") || Objects.equals(answer, "1")) {
+
+                    System.out.println(CodeColor.GREEN + "\nAvailable values: " + CodeColor.NONCOLOR);
+                    for (Status value : Status.values()) {
+                        System.out.println(value);
+                    }
+                    System.out.println();
+                    Validator<Status> statusValidator = new StatusValidator();
+                    String status = null;
+                    Status status1;
+
+                    do {
+                        System.out.print("Enter the value of status (Type: Status):  ");
+                        String line = scanner.nextLine().toLowerCase().trim();
+                        if (Utilities.hasNextLineOrThrow(scanner)) {
+                            if (!line.isEmpty())
+                                status = line;
+                        }
+                        try {
+                            if (!statusValidator.validate(Status.fromString(status))) {
+                                System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
+                                System.out.println("Restrictions: Should be Status.\n");
+                            }
+                        } catch (Exception e) {
+                            System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
+                            System.out.println("Restrictions: Should be Status.\n");
+                        }
+                        try {
+                            if (statusValidator.validate(Status.fromString(status))) {
+                                status1 = Status.fromString(status);
+                                break;
+                            }
+                        } catch (Exception e) {
+                            continue;
+                        }
+
+                        System.out.println("\nAvailable values: ");
+                        for (Status value : Status.values()) {
+                            System.out.println(value);
+                        }
+
+                    } while (true);
+
+                    result.setStatus(status1);
+                    break;
+                } else if (Objects.equals(answer, "n") || Objects.equals(answer, "no") || Objects.equals(answer, "2")) {
+                    System.out.println("Skipped. You can fill it later.");
+                    break;
+                }
+                System.out.println(CodeColor.RED + "\nInvalid answer! Try again.\n" + CodeColor.NONCOLOR);
+            }
+
 
             // from (may null)
 //            System.out.println("Starting \"from\" field setup... (Type: Location)");
@@ -165,8 +199,7 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
 //                scanner.nextLine();
 //            }
 
-
-
+            System.out.println();
             // creationDate
             Date creationDate = Date.from(Instant.now());
             System.out.println("Object created at " + creationDate);

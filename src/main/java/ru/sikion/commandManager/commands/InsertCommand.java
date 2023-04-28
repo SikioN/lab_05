@@ -1,9 +1,12 @@
 package ru.sikion.commandManager.commands;
 
 import ru.sikion.exceptions.BuildObjectException;
-import ru.sikion.models.handlers.*;
-import ru.sikion.models.handlers.userMode.WorkerCLIHandler;
+import ru.sikion.models.Utilites.CodeColor;
 import ru.sikion.models.Worker;
+import ru.sikion.models.handlers.CollectionHandler;
+import ru.sikion.models.handlers.ModuleHandler;
+import ru.sikion.models.handlers.WorkersHandler;
+import ru.sikion.models.handlers.userMode.WorkerCLIHandler;
 
 import java.util.HashSet;
 
@@ -54,6 +57,6 @@ public class InsertCommand implements BaseCommand {
 
         collectionHandler.addElementToCollection(handler.buildObject());
 
-        System.out.println("Element inserted!");
+        System.out.println(CodeColor.GREEN + "\nElement inserted!" + CodeColor.NONCOLOR);
     }
 }

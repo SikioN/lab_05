@@ -5,6 +5,7 @@ import ru.sikion.exceptions.BuildObjectException;
 import ru.sikion.exceptions.CommandInterruptedException;
 import ru.sikion.exceptions.UnknownCommandException;
 import ru.sikion.exceptions.WrongAmountOfArgumentsException;
+import ru.sikion.models.Utilites.CodeColor;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.ModuleHandler;
 import ru.sikion.models.handlers.nonUserMode.WorkerNonCLIHandler;
@@ -48,6 +49,20 @@ public class CommandManager {
         commands.put("remove_greater", new RemoveGreaterCommand());
         commands.put("remove_lower", new RemoveLowerCommand());
         commands.put("min_by_creation_date", new MinByCreationDateCommand());
+
+//        commands.put(CodeColor.BLUE + "help" + CodeColor.NONCOLOR, new HelpCommand());
+//        commands.put(CodeColor.BLUE + "info"+ CodeColor.NONCOLOR, new InfoCommand());
+//        commands.put(CodeColor.BLUE + "show"+ CodeColor.NONCOLOR, new ShowCommand());
+//        commands.put(CodeColor.BLUE + "add"+ CodeColor.NONCOLOR, new InsertCommand());
+//        commands.put(CodeColor.BLUE + "update"+ CodeColor.NONCOLOR, new UpdateCommand());
+//        commands.put(CodeColor.BLUE + "remove_by_id"+ CodeColor.NONCOLOR, new RemoveByIdCommand());
+//        commands.put(CodeColor.BLUE + "clear"+ CodeColor.NONCOLOR, new ClearCommand());
+//        commands.put(CodeColor.BLUE + "save"+ CodeColor.NONCOLOR, new SaveCommand());
+//        commands.put(CodeColor.BLUE + "execute_script"+ CodeColor.NONCOLOR, new ExecuteScriptCommand());
+//        commands.put(CodeColor.BLUE + "exit"+ CodeColor.NONCOLOR, new ExitCommand());
+//        commands.put(CodeColor.BLUE + "remove_greater"+ CodeColor.NONCOLOR, new RemoveGreaterCommand());
+//        commands.put(CodeColor.BLUE + "remove_lower"+ CodeColor.NONCOLOR, new RemoveLowerCommand());
+//        commands.put(CodeColor.BLUE + "min_by_creation_date"+ CodeColor.NONCOLOR, new MinByCreationDateCommand());
 
     }
 

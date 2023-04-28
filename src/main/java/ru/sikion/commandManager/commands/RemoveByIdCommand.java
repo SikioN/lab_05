@@ -41,6 +41,6 @@ public class RemoveByIdCommand implements BaseCommand {
 
         collectionHandler.getCollection().removeIf(worker -> Objects.equals(worker.getId(), finalId));
 
-        System.out.println("Executed.");
+        System.out.println("Removed.");
     }
 }

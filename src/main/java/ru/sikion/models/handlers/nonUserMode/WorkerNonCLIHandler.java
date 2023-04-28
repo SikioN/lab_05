@@ -40,7 +40,7 @@ public class WorkerNonCLIHandler implements ModuleHandler<Worker> {
         Worker result = new Worker();
         int valuesToRead = 12;
         int coordsIndex = 1;
-        int fromIndex = 3;
+        int fromIndex = 0;
         int toIndex = 7;
         ArrayList<String> values = new ArrayList<>(valuesToRead);
 

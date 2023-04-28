@@ -27,12 +27,12 @@ public class SaveCommand implements BaseCommand {
 
     @Override
     public void execute(String[] args) throws WrongAmountOfArgumentsException {
-        System.out.println("Saving...");
+        System.out.println("Saving collection...");
         CollectionHandler<HashSet<Worker>, Worker> collectionHandler = WorkersHandler.getInstance();
         Saver<HashSet<Worker>, Worker> saver = new Saver<>(Worker.class);
 
         saver.saveCollection(collectionHandler.getCollection(), "lab5");
 
-        System.out.println("Executed.");
+        System.out.println("Collection saved.");
     }
 }

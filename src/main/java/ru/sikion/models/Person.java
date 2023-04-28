@@ -89,10 +89,11 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "eyeColor=" + eyeColor +
-                ", hairColor=" + hairColor +
-                ", nationality=" + nationality +
+        return "Person {" +
+                "eye color is " + eyeColor.toString().toLowerCase() +
+                ", hair color is " + hairColor.toString().toLowerCase() +
+                ", nationality is " + nationality.toString().substring(0, 1).toUpperCase()
+                + nationality.toString().substring(1).toLowerCase() +
                 '}';
     }
 }

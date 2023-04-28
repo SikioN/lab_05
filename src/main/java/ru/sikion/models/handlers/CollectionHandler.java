@@ -55,7 +55,7 @@ public interface CollectionHandler<T extends AbstractCollection<E>, E> {
     /**
      * Provides method for get collection initDate.
      *
-     * @return Date instance -- Collection created time.
+     * @return Date instance - Collection created time.
      */
     Date getInitDate();
 
