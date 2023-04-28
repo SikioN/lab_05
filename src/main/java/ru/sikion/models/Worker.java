@@ -25,9 +25,7 @@ public class Worker implements Comparable<Worker> {
     private java.util.Date startDate;
     private java.time.LocalDate endDate;
     private Status status;
-    private Country nationality;
-    private EyeColor eyeColor;
-    private HairColor hairColor;
+    private Person person;
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
@@ -88,35 +86,10 @@ public class Worker implements Comparable<Worker> {
      *
      * @return End date of the worker
      */
-    public LocalDate getEndDate() {
-        return endDate;
+    public Person getPersonality() {
+        return person;
     }
 
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @return nationality of worker
-     */
-    public Country getNationality() {
-        return nationality;
-    }
-
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @return color of hair
-     */
-    public HairColor getHairColor() {
-        return hairColor;
-    }
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @return Color of eye
-     */
-    public EyeColor getEyeColor() {
-        return eyeColor;
-    }
     /**
      * Restrictions: Field can be null.
      *
@@ -125,6 +98,17 @@ public class Worker implements Comparable<Worker> {
     public Status getStatus() {
         return status;
     }
+
+
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @return End date of the worker
+     */
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
      *
@@ -189,35 +173,6 @@ public class Worker implements Comparable<Worker> {
     }
 
     /**
-     * Restrictions: Field can be null.
-     *
-     * @param nationality of value field Country
-     */
-    public void setCountry(Country nationality) {
-        this.nationality = nationality;
-    }
-
-
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @param hairColor of value field hair color
-     */
-    public void setCountry(HairColor hairColor) {
-        this.hairColor = hairColor;
-    }
-
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @param eyeColor of value field eye color
-     */
-    public void setCountry(EyeColor eyeColor) {
-        this.eyeColor = eyeColor;
-    }
-
-
-    /**
      * Restrictions: Field cannot be null. The value of this field should be automatically generated.
      *
      * @param creationDate of value field creationDate
@@ -226,9 +181,15 @@ public class Worker implements Comparable<Worker> {
         this.creationDate = creationDate;
     }
 
-    public void setEyeColor(EyeColor eyeColor) {this.eyeColor = eyeColor;}
-    public void setHairColor(HairColor hairColor) {this.hairColor = hairColor;}
 
+    /**
+     * Restrictions: Field can be null.
+     *
+     * @param person of value field person
+     */
+    public void setPersonality(Person person) {
+        this.person = person;
+    }
 
     @Override
     public boolean equals(Object o) {
@@ -259,19 +220,9 @@ public class Worker implements Comparable<Worker> {
 
     @Override
     public int compareTo(Worker o) {
-        return 0;
+        if (o == null) return 1;
+        if (this.getSalary() - o.getSalary() < 0) return -1;
+        else if (Objects.equals(this.salary, o.salary)) return 0;
+        else return 1;
     }
-
-
-//    @Override
-//    public int compareTo(Worker o) {
-//        if (o == null) return 1;
-//        if (o.id == null) return -1;
-//        if (this.distance - o.distance < 0)
-//            return -1;
-//        else if (this.distance == o.distance)
-//            return 0;
-//        else
-//            return 1;
-//    }
 }

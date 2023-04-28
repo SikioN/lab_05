@@ -3,7 +3,6 @@ package ru.sikion.main;
 import ru.sikion.commandManager.CommandExecutor;
 import ru.sikion.commandManager.CommandMode;
 import ru.sikion.fileLogic.Loader;
-import ru.sikion.models.Identity.EyeColor;
 import ru.sikion.models.Worker;
 import ru.sikion.models.handlers.CollectionHandler;
 import ru.sikion.models.handlers.WorkersHandler;
@@ -33,7 +32,7 @@ public class Main {
 
         // load collection
         Loader<HashSet<Worker>, Worker> loader = new Loader<>(handler.getCollection().getClass(), Worker.class);
-        handler.setCollection(loader.loadFromXMLbyEnvKey(ENV_KEY));
+        handler.setCollection(loader.loadFromCSVbyEnvKey(ENV_KEY));
         System.out.println("Loaded " + handler.getCollection().size() + " elements total.");
         System.out.println();
 

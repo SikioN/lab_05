@@ -13,13 +13,13 @@ import java.util.HashSet;
  * @since 1.0
  * @author Sikion
  */
-public class AddCommand implements BaseCommand {
+public class InsertCommand implements BaseCommand {
     ModuleHandler<Worker> handler;
 
     /**
      * Default constructor with handler from 1.0
      */
-    public AddCommand()
+    public InsertCommand()
     {
         handler = new WorkerCLIHandler();
     }
@@ -28,19 +28,19 @@ public class AddCommand implements BaseCommand {
      *
      * @param handler ModuleHandler for operating
      */
-    public AddCommand(ModuleHandler<Worker> handler)
+    public InsertCommand(ModuleHandler<Worker> handler)
     {
         this.handler = handler;
     }
 
     @Override
     public String getName() {
-        return "add";
+        return "Insert";
     }
 
     @Override
     public String getDescr() {
-        return "Adds new element to collection.";
+        return "Inserts new element to collection.";
     }
 
     @Override
@@ -54,6 +54,6 @@ public class AddCommand implements BaseCommand {
 
         collectionHandler.addElementToCollection(handler.buildObject());
 
-        System.out.println("Element added!");
+        System.out.println("Element inserted!");
     }
 }

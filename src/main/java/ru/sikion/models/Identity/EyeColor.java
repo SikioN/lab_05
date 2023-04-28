@@ -8,7 +8,7 @@ public enum EyeColor {
     AMBER("amber"),
     GREEN("green"),
     GRAY("gray");
-    private String value;
+    private final String value;
 
     private EyeColor(String value) {
         this.value = value;

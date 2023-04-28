@@ -87,62 +87,62 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
             result.setSalary(ssalary);
 
 
-            // eyeColor
-            Validator<EyeColor> eyeColorValidator = new EyeColorValidator();
-            String eyeColor = null;
-            EyeColor eyeColor1;
-            do {
-                System.out.println("Enter the value of eye color (Type: EyeColor)");
-                if (Utilities.hasNextLineOrThrow(scanner)) {
-                    String line = scanner.nextLine();
-                    if (!line.isEmpty())
-                        eyeColor = line;
-                }
-                try {
-                    if (!eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {
-                        System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Should be EyeColor and non nune.");
-                    }
-                } catch (Exception e) {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    System.out.println("Restrictions: Should be EyeColor and non nune.");
-                }
-                try {
-                    if (eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {eyeColor1 = EyeColor.fromString(eyeColor); break;}
-                } catch (NumberFormatException e) {
-                    continue;
-                }
-            } while (true);
-            result.setEyeColor(eyeColor1);
+//            // eyeColor
+//            Validator<EyeColor> eyeColorValidator = new EyeColorValidator();
+//            String eyeColor = null;
+//            EyeColor eyeColor1;
+//            do {
+//                System.out.println("Enter the value of eye color (Type: EyeColor)");
+//                if (Utilities.hasNextLineOrThrow(scanner)) {
+//                    String line = scanner.nextLine().toLowerCase();
+//                    if (!line.isEmpty())
+//                        eyeColor = line;
+//                }
+//                try {
+//                    if (!eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {
+//                        System.out.println("Value violates restrictions for field! Try again.");
+//                        System.out.println("Restrictions: Should be EyeColor and non nune.");
+//                    }
+//                } catch (Exception e) {
+//                    System.out.println("Value violates restrictions for field! Try again.");
+//                    System.out.println("Restrictions: Should be EyeColor and non nune.");
+//                }
+//                try {
+//                    if (eyeColorValidator.validate(EyeColor.fromString(eyeColor))) {eyeColor1 = EyeColor.fromString(eyeColor); break;}
+//                } catch (Exception e) {
+//                    continue;
+//                }
+//            } while (true);
+//            result.setEyeColor(eyeColor1);
 
 
-            // hairColor
-            Validator<HairColor> hairColorValidator = new HairColorValidator();
-            String hairColor = null;
-            HairColor hairColor1;
-            do {
-                System.out.println("Enter the value of hair color (Type: HairColor)");
-                if (Utilities.hasNextLineOrThrow(scanner)) {
-                    String line = scanner.nextLine().toLowerCase(Locale.ROOT);
-                    if (!line.isEmpty())
-                        eyeColor = line;
-                }
-                try {
-                    if (!hairColorValidator.validate(HairColor.fromString(hairColor))) {
-                        System.out.println("Value violates restrictions for field! Try again.");
-                        System.out.println("Restrictions: Should be HairColor and non nune.");
-                    }
-                } catch (Exception e) {
-                    System.out.println("Value violates restrictions for field! Try again.");
-                    System.out.println("Restrictions: Should be EyeColor and non nune.");
-                }
-                try {
-                    if (hairColorValidator.validate(HairColor.fromString(hairColor))) {hairColor1 = HairColor.fromString(hairColor); break;}
-                } catch (NumberFormatException e) {
-                    continue;
-                }
-            } while (true);
-            result.setHairColor(hairColor1);
+//            // hairColor
+//            Validator<HairColor> hairColorValidator = new HairColorValidator();
+//            String hairColor = null;
+//            HairColor hairColor1;
+//            do {
+//                System.out.println("Enter the value of hair color (Type: HairColor)");
+//                if (Utilities.hasNextLineOrThrow(scanner)) {
+//                    String line = scanner.nextLine().toLowerCase();
+//                    if (!line.isEmpty())
+//                        hairColor = line;
+//                }
+//                try {
+//                    if (!hairColorValidator.validate(HairColor.fromString(hairColor))) {
+//                        System.out.println("Value violates restrictions for field! Try again.");
+//                        System.out.println("Restrictions: Should be HairColor and non nune.");
+//                    }
+//                } catch (Exception e) {
+//                    System.out.println("Value violates restrictions for field! Try again.");
+//                    System.out.println("Restrictions: Should be EyeColor and non nune.");
+//                }
+//                try {
+//                    if (hairColorValidator.validate(HairColor.fromString(hairColor))) {hairColor1 = HairColor.fromString(hairColor); break;}
+//                } catch (Exception e) {
+//                    continue;
+//                }
+//            } while (true);
+//            result.setHairColor(hairColor1);
 
             // coords
             System.out.println("Starting coordinates field setup... (Type: Coordinates)");
