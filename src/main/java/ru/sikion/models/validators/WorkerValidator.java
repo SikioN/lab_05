@@ -1,6 +1,7 @@
 package ru.sikion.models.validators;
 
 import ru.sikion.models.Coordinates;
+import ru.sikion.models.Identity.Status;
 import ru.sikion.models.Worker;
 
 import java.util.Optional;
@@ -21,7 +22,7 @@ public class WorkerValidator implements Validator<Worker> {
                 new SalaryValidator().validate(worker.getSalary()) &&
 //                new StartDateValidator().validate(worker.getStartDate()) &&
 //                new EndDateValidator().validate(worker.getEndDate()) &&
-//                new StatusValidator().validate(worker.getStatus()) &&
+//                new StatusValidator().validate(Status.fromString(worker.getStatus())) &&
 //                new PersonValidator().validate(worker.getPersonality()) &&
                 new CoordYValidator().validate(Optional.of(worker).map(Worker::getCoordinates).map(Coordinates::getY).orElse(0f)) &&
                 new CoordXValidator().validate(Optional.of(worker).map(Worker::getCoordinates).map(Coordinates::getX).orElse(0));

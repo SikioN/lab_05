@@ -23,8 +23,13 @@ public enum EyeColor {
             }
         }
         throw new IllegalArgumentException("No such value");
+
     }
+
+    public String getName() {
+        return value;
     }
+}
 //    BLACK,
 //    BROWN,
 //    BLUE,

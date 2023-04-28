@@ -28,4 +28,7 @@ public enum HairColor {
         }
         throw new IllegalArgumentException("No such value");
     }
+    public String getName() {
+        return value;
+    }
 }

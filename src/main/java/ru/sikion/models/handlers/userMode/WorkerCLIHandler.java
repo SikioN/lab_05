@@ -131,49 +131,41 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
 
                 if (Objects.equals(answer, "y") || Objects.equals(answer, "yes") || Objects.equals(answer, "1")) {
 
-                    System.out.println(CodeColor.GREEN + "\nAvailable values: " + CodeColor.NONCOLOR);
+                    System.out.println(CodeColor.GREEN + "Available values: " + CodeColor.NONCOLOR);
                     for (Status value : Status.values()) {
                         System.out.println(value);
                     }
                     System.out.println();
+
+
                     Validator<Status> statusValidator = new StatusValidator();
                     String status = null;
-                    Status status1;
+                    String status1;
 
-                    do {
+                    while (true) {
                         System.out.print("Enter the value of status (Type: Status):  ");
-                        String line = scanner.nextLine().toLowerCase().trim();
+
                         if (Utilities.hasNextLineOrThrow(scanner)) {
+                            String line = scanner.nextLine().toLowerCase().trim();
                             if (!line.isEmpty())
                                 status = line;
                         }
+
                         try {
-                            if (!statusValidator.validate(Status.fromString(status))) {
-                                System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
-                                System.out.println("Restrictions: Should be Status.\n");
+                             if (statusValidator.validate(Status.fromString(status))) {
+                                status1 = Status.fromString(status).toString();
+                                break;
                             }
                         } catch (Exception e) {
                             System.out.println(CodeColor.RED + "\nValue violates restrictions for field! Try again." + CodeColor.NONCOLOR);
                             System.out.println("Restrictions: Should be Status.\n");
                         }
-                        try {
-                            if (statusValidator.validate(Status.fromString(status))) {
-                                status1 = Status.fromString(status);
-                                break;
-                            }
-                        } catch (Exception e) {
-                            continue;
-                        }
 
-                        System.out.println("\nAvailable values: ");
-                        for (Status value : Status.values()) {
-                            System.out.println(value);
-                        }
 
-                    } while (true);
-
+                    }
                     result.setStatus(status1);
                     break;
+
                 } else if (Objects.equals(answer, "n") || Objects.equals(answer, "no") || Objects.equals(answer, "2")) {
                     System.out.println("Skipped. You can fill it later.");
                     break;
@@ -181,31 +173,13 @@ public class WorkerCLIHandler implements ModuleHandler<Worker> {
                 System.out.println(CodeColor.RED + "\nInvalid answer! Try again.\n" + CodeColor.NONCOLOR);
             }
 
-
-            // from (may null)
-//            System.out.println("Starting \"from\" field setup... (Type: Location)");
-//            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
-//            String answer = scanner.next();
-//            if (Utilities.hasNextLineOrThrow(scanner)) {
-//                scanner.nextLine();
-//            }
-//
-//            // to (may null)
-//            System.out.println("Starting \"to\" field setup... (Type: Location)");
-//            System.out.print("This field may be skipped to fill. Skip? [y/n] ");
-//            answer = scanner.next();
-//
-//            if (Utilities.hasNextLineOrThrow(scanner)) {
-//                scanner.nextLine();
-//            }
-
             System.out.println();
             // creationDate
             Date creationDate = Date.from(Instant.now());
             System.out.println("Object created at " + creationDate);
             result.setCreationDate(creationDate);
-
-            System.out.println("Object setup completed! Sending result...");
+//
+//            System.out.println("Object setup completed! Sending result...");
 
             return result;
 

@@ -20,9 +20,9 @@ public class Worker implements Comparable<Worker> {
     private Coordinates coordinates;
     private java.util.Date creationDate;
     private Double salary;
-    private java.util.Date startDate;
-    private java.time.LocalDate endDate;
-    private Status status;
+//    private java.util.Date startDate;
+//    private java.time.LocalDate endDate;
+    private String status;
     private Person person;
 
     /**
@@ -70,14 +70,14 @@ public class Worker implements Comparable<Worker> {
         return salary;
     }
 
-    /**
-     * Restrictions: Field cannot be null.
-     *
-     * @return Start date of the worker
-     */
-    public java.util.Date getStartDate() {
-        return startDate;
-    }
+//    /**
+//     * Restrictions: Field cannot be null.
+//     *
+//     * @return Start date of the worker
+//     */
+//    public java.util.Date getStartDate() {
+//        return startDate;
+//    }
 
     /**
      * Restrictions: Field can be null.
@@ -93,19 +93,19 @@ public class Worker implements Comparable<Worker> {
      *
      * @return Status of the worker
      */
-    public Status getStatus() {
+    public String getStatus() {
         return status;
     }
 
 
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @return End date of the worker
-     */
-    public LocalDate getEndDate() {
-        return endDate;
-    }
+//    /**
+//     * Restrictions: Field can be null.
+//     *
+//     * @return End date of the worker
+//     */
+//    public LocalDate getEndDate() {
+//        return endDate;
+//    }
 
     /**
      * Restrictions: Field cannot be null. The value of this field should be unique, greater than 0 and automatically generated.
@@ -143,30 +143,30 @@ public class Worker implements Comparable<Worker> {
         this.salary = salary;
     }
 
-    /**
-     * Restrictions: Field cannot be null.
-     *
-     * @param startDate of value field startDate
-     */
-    public void setStartDate(java.util.Date startDate) {
-        this.startDate = startDate;
-    }
+//    /**
+//     * Restrictions: Field cannot be null.
+//     *
+//     * @param startDate of value field startDate
+//     */
+//    public void setStartDate(java.util.Date startDate) {
+//        this.startDate = startDate;
+//    }
 
-    /**
-     * Restrictions: Field can be null.
-     *
-     * @param endDate of value field endDate
-     */
-    public void setEndDate(java.time.LocalDate endDate) {
-        this.endDate = endDate;
-    }
+//    /**
+//     * Restrictions: Field can be null.
+//     *
+//     * @param endDate of value field endDate
+//     */
+//    public void setEndDate(java.time.LocalDate endDate) {
+//        this.endDate = endDate;
+//    }
 
     /**
      * Restrictions: Field can be null.
      *
      * @param status of value field status
      */
-    public void setStatus(Status status) {
+    public void setStatus(String status) {
         this.status = status;
     }
 
@@ -193,12 +193,17 @@ public class Worker implements Comparable<Worker> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Worker worker)) return false;
-        return Objects.equals(getId(), worker.getId()) && Objects.equals(getName(), worker.getName()) && Objects.equals(getCoordinates(), worker.getCoordinates()) && Objects.equals(getCreationDate(), worker.getCreationDate()) && Objects.equals(getSalary(), worker.getSalary()) && Objects.equals(getStartDate(), worker.getStartDate()) && Objects.equals(getEndDate(), worker.getEndDate()) && getStatus() == worker.getStatus();
+        return Objects.equals(getId(), worker.getId()) && Objects.equals(getName(), worker.getName()) && Objects.equals(getCoordinates(), worker.getCoordinates()) && Objects.equals(getCreationDate(), worker.getCreationDate()) && Objects.equals(getSalary(), worker.getSalary())
+//                && Objects.equals(getStartDate(), worker.getStartDate())
+//                && Objects.equals(getEndDate(), worker.getEndDate())
+                && getStatus() == worker.getStatus();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getCoordinates(), getCreationDate(), getSalary(), getStartDate(), getEndDate(), getStatus());
+        return Objects.hash(getId(), getName(), getCoordinates(), getCreationDate(), getSalary(),
+//                getStartDate(), getEndDate(),
+                getStatus());
     }
 
 
@@ -209,8 +214,8 @@ public class Worker implements Comparable<Worker> {
                 "\n" + CodeColor.VIOLET + "  coordinates" + CodeColor.NONCOLOR + " = " + coordinates +
                 "\n" + CodeColor.VIOLET + "  creationDate" + CodeColor.NONCOLOR + " = " + creationDate +
                 "\n" + CodeColor.VIOLET + "  salary" + CodeColor.NONCOLOR + " = " + salary +
-                "\n" + CodeColor.VIOLET + "  startDate" + CodeColor.NONCOLOR + " = " + startDate +
-                "\n" + CodeColor.VIOLET + "  endDate" + CodeColor.NONCOLOR + " = " + endDate +
+//                "\n" + CodeColor.VIOLET + "  startDate" + CodeColor.NONCOLOR + " = " + startDate +
+//                "\n" + CodeColor.VIOLET + "  endDate" + CodeColor.NONCOLOR + " = " + endDate +
                 "\n" + CodeColor.VIOLET + "  status" + CodeColor.NONCOLOR + " = " + status +
                 "\n" + CodeColor.VIOLET + "  personality" + CodeColor.NONCOLOR + " = " + person +
                 "\n";
