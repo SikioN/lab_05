@@ -1,3 +1,3 @@
 Manifest-Version: 1.0
 Main-Class: ru.sikion.ZeusMod.src.server.ServerSide
-Class-Path: ru.sikion.lib.gson-2.8.5.jar
+

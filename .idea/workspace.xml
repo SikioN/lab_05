@@ -1,407 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Server" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="add env key">
+    <list default="true" id="7610e231-8a10-4ac8-bf36-b75abd1143ae" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Client.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Server.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/commands/LoadCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/commands/LoadCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/server/CollectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/server/CollectionManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/PrometheusMod/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/PrometheusMod/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/commands/SortCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/sikion/ZeusMod/src/commands/SortCommand.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Enum" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PREVIOUS_COMMIT_AUTHORS">
-      <list>
-        <option value="NM" />
-      </list>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
-  <component name="ProjectId" id="2MSS4yY6NzM2cq4G5O9DnkXvJv0" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2REuuAhwV4FerRS8rESlufVuNMw" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "extract.method.default.visibility": "private",
     "git-widget-placeholder": "lab6",
-    "last_opened_file_path": "C:/Users/Lizza/IdeaProjects/lab_05/src/main/java/ru/sikion/ZeusMod/src/tale",
+    "last_opened_file_path": "C:/Users/Lizza/IdeaProjects/lab_05/src/main/java/ru/sikion/lib/gson-2.8.5.jar",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
     "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
-    ]
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Lizza\IdeaProjects\lab_05\src\main\java\ru\sikion\ZeusMod\src\tale" />
-      <recent name="C:\Users\Lizza\IdeaProjects\lab_05\src\main\java\ru\sikion" />
-      <recent name="C:\Users\Lizza\IdeaProjects\lab_05\lab6-25.03.19" />
-      <recent name="C:\Users\Lizza\IdeaProjects\lab_05\lab6-25.03.19\ZeusMod\src\tale" />
-      <recent name="D:\lab_05\src\main\java\ru\sikion\models\Utilites" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\lab_05\target" />
-      <recent name="D:\lab_05\src\main\java\ru\sikion\models\handlers\userMode" />
-      <recent name="D:\lab_05\src\main\java1.ru.sikion" />
-      <recent name="D:\lab_05\src1\models\Identity" />
-      <recent name="D:\lab_05\src1\models" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ru.sikion.fileLogic" />
-      <recent name="ru.sikion.models.validators" />
-    </key>
-  </component>
-  <component name="RunAnythingCache">
-    <option name="myCommands">
-      <command value="mvn jar:jar" />
-    </option>
-  </component>
-  <component name="RunManager" selected="Maven.lab_05 [install]">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ru.sikion.Main" />
-      <module name="lab_05" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.sikion.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ru.sikion.old.main.Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="ru.sikion.old.main.Main" />
-      <module name="lab_05" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.sikion.old.main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="lab_05 [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
-      <MavenSettings>
-        <option name="myGeneralSettings" />
-        <option name="myRunnerSettings" />
-        <option name="myRunnerParameters">
-          <MavenRunnerParameters>
-            <option name="profiles">
-              <set />
-            </option>
-            <option name="goals">
-              <list>
-                <option value="install" />
-              </list>
-            </option>
-            <option name="pomFileName" />
-            <option name="profilesMap">
-              <map />
-            </option>
-            <option name="resolveToWorkspace" value="false" />
-            <option name="workingDirPath" value="$PROJECT_DIR$" />
-          </MavenRunnerParameters>
-        </option>
-      </MavenSettings>
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Application.ru.sikion.old.main.Main" />
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Maven.lab_05 [install]" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.ru.sikion.old.main.Main" />
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5eabd8a4-3742-4572-a528-fa2de2f970d3" name="Changes" comment="" />
-      <created>1677759302726</created>
+      <changelist id="7610e231-8a10-4ac8-bf36-b75abd1143ae" name="Changes" comment="" />
+      <created>1686827782539</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677759302726</updated>
-      <workItem from="1677759303780" duration="2298000" />
-      <workItem from="1677764427369" duration="3758000" />
-      <workItem from="1677768767810" duration="234000" />
-      <workItem from="1677769020794" duration="2215000" />
-      <workItem from="1678043233381" duration="630000" />
-      <workItem from="1678894207634" duration="618000" />
-      <workItem from="1678894844312" duration="440000" />
-      <workItem from="1678895366756" duration="27000" />
-      <workItem from="1678895408186" duration="10000" />
-      <workItem from="1678895423840" duration="143000" />
-      <workItem from="1678896096144" duration="83000" />
-      <workItem from="1678896192731" duration="11000" />
-      <workItem from="1678896245864" duration="643000" />
-      <workItem from="1678896907362" duration="7974000" />
-      <workItem from="1678908666368" duration="1446000" />
-      <workItem from="1678912007741" duration="381000" />
-      <workItem from="1681200928275" duration="1245000" />
-      <workItem from="1681204464625" duration="3193000" />
-      <workItem from="1681209946988" duration="26000" />
-      <workItem from="1681210038421" duration="21000" />
-      <workItem from="1681210065149" duration="89000" />
-      <workItem from="1681210168562" duration="2928000" />
-      <workItem from="1681338023350" duration="375000" />
-      <workItem from="1681338445124" duration="620000" />
-      <workItem from="1681339082825" duration="11108000" />
-      <workItem from="1682568344936" duration="555000" />
-      <workItem from="1682568921951" duration="344000" />
-      <workItem from="1682569325904" duration="47000" />
-      <workItem from="1682569599760" duration="30000" />
-      <workItem from="1682569636408" duration="8000" />
-      <workItem from="1682569691762" duration="28000" />
-      <workItem from="1682569758067" duration="17000" />
-      <workItem from="1682569800447" duration="3286000" />
-      <workItem from="1682576032593" duration="338000" />
-      <workItem from="1682576712330" duration="7238000" />
-      <workItem from="1682680442075" duration="364000" />
-      <workItem from="1682680824400" duration="313000" />
-      <workItem from="1682681899942" duration="3040000" />
-      <workItem from="1682685402105" duration="238000" />
-      <workItem from="1682685667672" duration="10778000" />
-      <workItem from="1682697692066" duration="1129000" />
-      <workItem from="1682699204894" duration="15452000" />
-      <workItem from="1686775127780" duration="12243000" />
+      <updated>1686827782539</updated>
+      <workItem from="1686827783585" duration="883000" />
     </task>
-    <task id="LOCAL-00001" summary="Create project">
-      <created>1678043317673</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678043317673</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Create project">
-      <created>1678043351110</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1678043351110</updated>
-    </task>
-    <task id="LOCAL-00003" summary="First push">
-      <created>1678043808152</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1678043808152</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Add validators">
-      <created>1678910082836</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1678910082836</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Add validators">
-      <created>1681209260203</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1681209260203</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Commit version 1.2">
-      <created>1681377698675</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1681377698675</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Create a full project">
-      <created>1682578871350</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1682578871350</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Create a full project">
-      <created>1682578896029</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1682578896029</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Create a full project">
-      <created>1682580096413</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1682580096413</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Catch the bugs :)">
-      <created>1682585847470</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1682585847470</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Another and another...">
-      <created>1682594282451</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1682594282451</updated>
-    </task>
-    <task id="LOCAL-00012" summary="add worker.xml...">
-      <created>1682595520827</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1682595520827</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix bugs">
-      <created>1682602810791</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1682602810791</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix bugs">
-      <created>1682607464092</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1682607464092</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Rework of lab to conforms to the variant">
-      <created>1682690703573</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1682690703573</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Add commands">
-      <created>1682695284795</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1682695284795</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Add design for console application">
-      <created>1682707123738</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1682707123738</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Remove all bugs">
-      <created>1682714726379</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1682714726379</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Create lab6">
-      <created>1686823625499</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1686823625499</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fix import">
-      <created>1686823687025</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1686823687025</updated>
-    </task>
-    <task id="LOCAL-00021" summary="add env key">
-      <created>1686824189657</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1686824189657</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Create project" />
-    <MESSAGE value="First push" />
-    <MESSAGE value="Add validators" />
-    <MESSAGE value="Commit version 1.2" />
-    <MESSAGE value="Create a full project" />
-    <MESSAGE value="Catch the bugs :)" />
-    <MESSAGE value="Another and another..." />
-    <MESSAGE value="add worker.xml..." />
-    <MESSAGE value="fix bugs" />
-    <MESSAGE value="Rework of lab to conforms to the variant" />
-    <MESSAGE value="Add commands" />
-    <MESSAGE value="Add design for console application" />
-    <MESSAGE value="Remove all bugs" />
-    <MESSAGE value="Create lab6" />
-    <MESSAGE value="Fix import" />
-    <MESSAGE value="add env key" />
-    <option name="LAST_COMMIT_MESSAGE" value="add env key" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
