@@ -23,7 +23,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>ru.sikion.main.Main</mainClass>
+                            <mainClass>ru.sikion.old.main.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
