@@ -1,6 +1,6 @@
 package ru.sikion.ZeusMod.src.tale;
 
-import ru.sikion.old.models.Utilites.CodeColor;
+import ru.sikion.Utilites.CodeColor;
 
 import java.util.Date;
 import java.util.Objects;
