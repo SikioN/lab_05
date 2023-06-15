@@ -7,7 +7,7 @@ import java.net.Socket;
 
 public class ServerSide {
 
-    private static CollectionManager serverCollection = new CollectionManager(System.getenv("Collman_Path"));
+    private static final CollectionManager serverCollection = new CollectionManager(System.getenv("lab6"));
 
     /**
     * Точка входа в программу. Управляет подключением к клиентам и созданием потоков для каждого из них.
