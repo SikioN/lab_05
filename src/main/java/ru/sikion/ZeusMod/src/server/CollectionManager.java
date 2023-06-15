@@ -35,7 +35,7 @@ public final class CollectionManager {
         try {
             if (collectionPath == null) throw new FileNotFoundException();
         } catch (FileNotFoundException ex) {
-            System.err.println("Путь к файлу должен быть задан переменной окружения 'Collman_Path.'");
+            System.err.println("Путь к файлу должен быть задан переменной окружения 'lab6'.");
             System.exit(1);
         }
         jsonCollection = new File(collectionPath);

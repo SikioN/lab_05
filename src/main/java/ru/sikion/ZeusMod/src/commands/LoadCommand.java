@@ -8,7 +8,7 @@ import java.util.LinkedList;
 
 /**
  * Класс {@code LoadCommand} переопределяет метод {@code execute ()} для загрузки файла пути, указанному в
- * переменной окружения "Collman_Path".
+ * переменной окружения "lab6".
  * @author SiKion
  * @version 1.4
  * @since 04
