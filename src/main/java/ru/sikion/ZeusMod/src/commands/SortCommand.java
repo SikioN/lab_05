@@ -44,7 +44,7 @@ public class SortCommand extends AbstractCommand {
                     case "-id", "-i" -> {
                         collection.sort(Comparator.comparing(Shorty::getId));
                         getManager().save();
-                        return "Коллекция упорядочена по репутации.";
+                        return "Коллекция упорядочена по id.";
                     }
                     default -> {
                         return "Неправильный параметр. Синтаксис 'sort -{name / salary / date/ id}'.";
